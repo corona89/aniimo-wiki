@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "meta": {
+    "game": "Aniimo",
+    "world_id": "idyll",
+    "coordinate_system": {
+      "kind": "unknown",
+      "units": null,
+      "origin_notes": "No public x/y/z format is documented in the 2026-09-16 research pack. Keep geometry null until verified.",
+      "z_axis": "unknown",
+      "confidence": "unknown"
+    },
+    "version": "0.0.0-empty",
+    "accessed": "2026-09-16",
+    "policy": "Do not invent coordinates or placeholder pins. This collection is intentionally empty."
+  },
+  "features": []
+}

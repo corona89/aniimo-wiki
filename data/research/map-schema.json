@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AniimoWikiMapFeatureCollection",
+  "description": "Proposed map data model for future fan wiki. Do not populate coordinates until verified from game or trusted dumps.",
+  "type": "object",
+  "required": [
+    "type",
+    "features",
+    "meta"
+  ],
+  "properties": {
+    "type": {
+      "const": "FeatureCollection"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "game": {
+          "const": "Aniimo"
+        },
+        "world_id": {
+          "const": "idyll"
+        },
+        "coordinate_system": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "game_native_xy",
+                "unknown"
+              ]
+            },
+            "units": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "origin_notes": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "z_axis": {
+              "enum": [
+                "unused",
+                "height",
+                "unknown"
+              ],
+              "default": "unknown"
+            },
+            "confidence": {
+              "enum": [
+                "confirmed",
+                "marketing",
+                "community",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "version": {
+          "type": "string"
+        },
+        "accessed": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/feature"
+      }
+    }
+  },
+  "$defs": {
+    "confidence": {
+      "enum": [
+        "confirmed",
+        "marketing",
+        "community",
+        "unknown"
+      ]
+    },
+    "marker_type": {
+      "enum": [
+        "spawn_aniimo",
+        "spawn_weather",
+        "spawn_time",
+        "chest",
+        "gathering",
+        "boss",
+        "egg",
+        "teleporter",
+        "sanctum",
+        "puzzle",
+        "rv_park",
+        "landmark",
+        "ecological_observation",
+        "branch_nurture",
+        "other"
+      ]
+    },
+    "feature": {
+      "type": "object",
+      "required": [
+        "type",
+        "properties",
+        "geometry"
+      ],
+      "properties": {
+        "type": {
+          "const": "Feature"
+        },
+        "id": {
+          "type": "string",
+          "description": "Stable marker id, e.g. spawn-breezy-emberpup-01"
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "const": "Point"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "ONLY real verified coords. Prefer omit geometry via null alternative until known."
+                }
+              }
+            },
+            {
+              "type": "null",
+              "description": "Allowed: marker known to exist in region but coords unknown"
+            }
+          ]
+        },
+        "properties": {
+          "type": "object",
+          "required": [
+            "marker_type",
+            "region_id",
+            "confidence",
+            "source_urls"
+          ],
+          "properties": {
+            "marker_type": {
+              "$ref": "#/$defs/marker_type"
+            },
+            "name_en": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "name_ko": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "region_id": {
+              "type": "string",
+              "description": "FK to regions.json regions[].id"
+            },
+            "creature_slug": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "FK to creatures.json slug"
+            },
+            "form": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "basic|beach|prismana|rainstorm|..."
+            },
+            "element": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "weather": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                null,
+                "clear",
+                "rain",
+                "thunderstorm",
+                "snow",
+                "prismana_flow",
+                "unknown"
+              ]
+            },
+            "time_of_day": {
+              "enum": [
+                null,
+                "any",
+                "day",
+                "night",
+                "unknown"
+              ]
+            },
+            "level_band": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "filters": {
+              "type": "object",
+              "properties": {
+                "evolution_stage": {
+                  "enum": [
+                    null,
+                    "lumin",
+                    "gamma",
+                    "nova",
+                    "unknown"
+                  ]
+                },
+                "rarity": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "notes": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "confidence": {
+              "$ref": "#/$defs/confidence"
+            },
+            "source_urls": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "format": "uri"
+              },
+              "minItems": 1
+            },
+            "verified_in_build": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "example_empty_feature": {
+    "type": "Feature",
+    "id": "example-no-coords",
+    "geometry": null,
+    "properties": {
+      "marker_type": "spawn_aniimo",
+      "name_en": "Example only — delete",
+      "name_ko": null,
+      "region_id": "nimbus-fields",
+      "creature_slug": "nimbi",
+      "form": "basic",
+      "element": null,
+      "weather": null,
+      "time_of_day": "any",
+      "level_band": "17-21",
+      "notes": "Schema stub. No coordinates invented.",
+      "confidence": "unknown",
+      "source_urls": [
+        "https://aniimotools.dev/map/"
+      ]
+    }
+  },
+  "related_tables": {
+    "regions": "regions.json#/regions",
+    "creatures": "creatures.json#/creatures"
+  }
+}

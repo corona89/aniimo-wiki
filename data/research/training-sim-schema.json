@@ -1,0 +1,454 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AniimoTrainingSimDataModel",
+  "description": "Proposed data model for a future Aniimo training/breeding simulation UI. Missing numeric fields MUST be null — never fabricate.",
+  "accessed": "2026-09-16",
+  "enums": {
+    "confidence": [
+      "confirmed",
+      "marketing",
+      "community",
+      "unknown"
+    ],
+    "evolution_stage": [
+      "lumin",
+      "gamma",
+      "nova",
+      "unknown"
+    ],
+    "element": [
+      "fire",
+      "water",
+      "grass",
+      "lightning",
+      "earth",
+      "wind",
+      "dark",
+      "ice",
+      "light",
+      "unknown"
+    ],
+    "combat_role": [
+      "dps",
+      "break",
+      "support",
+      "heal",
+      "regen",
+      "unknown"
+    ],
+    "potential_grade": [
+      "common",
+      "uncommon",
+      "rare",
+      "epic",
+      "perfect",
+      "unknown"
+    ],
+    "sparkling_style": [
+      "none",
+      "normal",
+      "brilliant",
+      "shadow",
+      "unknown"
+    ],
+    "aniipod_id": [
+      "aniipod",
+      "super_aniipod",
+      "speed_aniipod",
+      "tracking_aniipod",
+      "ultimate_aniipod",
+      "champion_aniipod",
+      "sparkling_aniipod",
+      "big_white_ball",
+      "sparkling_cube",
+      "unknown"
+    ]
+  },
+  "creature_species": {
+    "description": "One row per Aniilog species (base form).",
+    "fields": {
+      "id": "string slug",
+      "aniilog_no": "string|null",
+      "name_en": "string|null",
+      "name_ko": "string|null",
+      "element": "element enum|null",
+      "role": "combat_role|null",
+      "stage": "evolution_stage|null",
+      "base_stats": {
+        "hp": null,
+        "break": null,
+        "attack": null,
+        "magic_def": null,
+        "phys_def": null,
+        "energy_regen": null,
+        "total_attr": null,
+        "confidence": "unknown",
+        "notes": "Fill only from official index / verified dump"
+      },
+      "forms": [
+        "form_id..."
+      ],
+      "confidence": "community"
+    }
+  },
+  "creature_form": {
+    "fields": {
+      "id": "string",
+      "species_id": "FK",
+      "form_key": "basic|beach|highland|rainstorm|prismana|night|umbrabow|...",
+      "name_en": null,
+      "name_ko": null,
+      "element_override": null,
+      "base_stats": null,
+      "habitat_region_ids": [],
+      "sparkling_eligible": null,
+      "confidence": "unknown"
+    }
+  },
+  "evolution_edge": {
+    "type": "object",
+    "required": [
+      "from_id",
+      "to_id",
+      "conditions",
+      "confidence"
+    ],
+    "properties": {
+      "from_id": {
+        "type": "string"
+      },
+      "to_id": {
+        "type": "string"
+      },
+      "conditions": {
+        "type": "object",
+        "properties": {
+          "min_level": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "item_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "region_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "weather": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "time_of_day": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "confidence": {
+        "enum": [
+          "confirmed",
+          "marketing",
+          "community",
+          "unknown"
+        ]
+      }
+    },
+    "examples_documented": [
+      {
+        "from_id": "pebbling",
+        "to_id": "geodeback",
+        "conditions": {
+          "item_ids": [],
+          "notes": "Earth branch — material ID unknown"
+        },
+        "confidence": "community"
+      },
+      {
+        "from_id": "pebbling",
+        "to_id": "lavazar",
+        "conditions": {
+          "item_ids": [],
+          "notes": "Fire branch — material ID unknown"
+        },
+        "confidence": "community"
+      }
+    ]
+  },
+  "individual_instance": {
+    "description": "A single owned Aniimo in the sim.",
+    "fields": {
+      "instance_id": "uuid",
+      "species_id": "FK",
+      "form_id": "FK",
+      "nickname": null,
+      "level": null,
+      "exp": null,
+      "potential_grade": null,
+      "innate_abilities": {
+        "type": "object",
+        "additionalProperties": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "description": "values unknown — store nulls"
+      },
+      "traits": {
+        "axes": null,
+        "confidence": "unknown"
+      },
+      "is_sparkling": false,
+      "sparkling_style": "none",
+      "is_prismana": false,
+      "is_alpha": false,
+      "bond_level": null,
+      "resonance_level": null,
+      "equipment_ids": [],
+      "accessory_ids": [],
+      "acquired_via": "capture|egg|breed|reward|unknown",
+      "confidence": "unknown"
+    }
+  },
+  "training_actions": [
+    {
+      "id": "resonate",
+      "label_en": "Resonance training",
+      "label_ko": "공명 훈련",
+      "requires": {
+        "min_level": 20,
+        "max_level": 60,
+        "item": "astranite_tier"
+      },
+      "effect": {
+        "stat_gains": null,
+        "notes": "Numeric gains unpublished"
+      },
+      "confidence": "community"
+    },
+    {
+      "id": "evolve",
+      "label_en": "Evolve",
+      "label_ko": "진화",
+      "requires": {
+        "edge_id": "FK evolution_edge"
+      },
+      "effect": {
+        "replace_form": true
+      },
+      "confidence": "community"
+    },
+    {
+      "id": "appraise_potential",
+      "label_en": "Appraise Potential",
+      "label_ko": "잠재력 감정",
+      "requires": {},
+      "effect": {
+        "reveal_potential_grade": true
+      },
+      "confidence": "community"
+    },
+    {
+      "id": "apply_sparkling_sigil",
+      "label_en": "Apply Sparkling Sigil",
+      "label_ko": "스파클 인장",
+      "requires": {
+        "item": "sparkling_sigil"
+      },
+      "effect": {
+        "set_sparkling": true,
+        "style_odds": {
+          "normal": 0.99,
+          "brilliant": 0.005,
+          "shadow": 0.005,
+          "source": "https://www.aniimo.com/ko/formula-multipliers",
+          "confidence": "confirmed"
+        }
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "id": "hatch_egg",
+      "label_en": "Hatch",
+      "label_ko": "부화",
+      "requires": {
+        "egg_id": "FK",
+        "hatchinator": true
+      },
+      "effect": {
+        "create_instance": true,
+        "timer_seconds": null
+      },
+      "confidence": "community"
+    },
+    {
+      "id": "caress_egg",
+      "label_en": "Hatchinator Caress",
+      "label_ko": "쓰다듬기(부화 가속)",
+      "requires": {
+        "uses_remaining": null
+      },
+      "effect": {
+        "complete_timer": true
+      },
+      "confidence": "community"
+    },
+    {
+      "id": "breed",
+      "label_en": "Breed",
+      "label_ko": "교배",
+      "requires": {
+        "parent_a": "instance",
+        "parent_b": "instance"
+      },
+      "effect": {
+        "sparkling_inherit_100": "if specified parent",
+        "prismana_inherit_100": "if specified parent",
+        "other_iv_rules": null
+      },
+      "confidence": "community"
+    },
+    {
+      "id": "nurture_branch",
+      "label_en": "Nurture Branch / 생태 육성",
+      "label_ko": "지맥/생태 육성",
+      "requires": {
+        "region_collection_pct": null
+      },
+      "effect": {
+        "prismana_instant_chance": 0.03,
+        "prismana_energy_gain": 480,
+        "prismana_energy_soft_pity": 10500,
+        "sparkling_rate_bias": null,
+        "source": "https://www.aniimo.com/ko/formula-multipliers"
+      },
+      "confidence": "confirmed"
+    },
+    {
+      "id": "twine_bond",
+      "label_en": "Increase Twine bond",
+      "label_ko": "트와인 유대",
+      "requires": {},
+      "effect": {
+        "bond_delta": null
+      },
+      "confidence": "unknown"
+    }
+  ],
+  "inventory_items_affecting_growth": [
+    {
+      "id": "astranite_basic",
+      "name_en": "Basic Astranite",
+      "name_ko": null,
+      "effect": "resonance_fuel",
+      "numeric_effect": null,
+      "confidence": "community"
+    },
+    {
+      "id": "astranite_standard",
+      "name_en": "Standard Astranite",
+      "name_ko": null,
+      "effect": "resonance_fuel",
+      "numeric_effect": null,
+      "confidence": "community"
+    },
+    {
+      "id": "astranite_advanced",
+      "name_en": "Advanced Astranite",
+      "name_ko": null,
+      "effect": "resonance_fuel",
+      "numeric_effect": null,
+      "confidence": "community"
+    },
+    {
+      "id": "champion_aniipod",
+      "name_en": "Champion Aniipod",
+      "name_ko": "챔피언 애니팟",
+      "effect": "guaranteed_catch_plus_innate_bias",
+      "catch_coeff": "guaranteed",
+      "numeric_effect": null,
+      "confidence": "confirmed"
+    },
+    {
+      "id": "sparkling_aniipod",
+      "name_en": "Sparkling Aniipod",
+      "name_ko": "스파클 애니팟",
+      "effect": "guaranteed_catch_apply_sparkling_style_table",
+      "catch_coeff": "guaranteed",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "sparkling_sigil",
+      "name_en": "Sparkling Sigil / Mark",
+      "name_ko": "스파클 인장",
+      "effect": "grant_sparkling_to_owned",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "sparkling_radiance",
+      "name_en": "Sparkling Radiance",
+      "name_ko": "스파클 광채",
+      "effect": "reroll_sparkling_style",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "lumin_amber",
+      "name_en": "Lumin Amber",
+      "name_ko": null,
+      "effect": "branch_infusion_catch_nurture_weather_sparkling",
+      "numeric_effect": null,
+      "confidence": "community"
+    },
+    {
+      "id": "leyline_essence",
+      "name_en": "Leyline essence",
+      "name_ko": "지맥 정수",
+      "effect": "nurture_prismana_energy",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "evolution_material_generic",
+      "name_en": "Evolution material (branching)",
+      "name_ko": "진화 재료",
+      "effect": "unlock_evolution_edge",
+      "specific_ids": null,
+      "confidence": "marketing"
+    }
+  ],
+  "capture_coeffs_official": {
+    "source": "https://www.aniimo.com/ko/formula-multipliers",
+    "confidence": "confirmed",
+    "aniipod": 1.0,
+    "super_aniipod": 1.5,
+    "speed_tracking_ultimate": 2.0,
+    "champion_sparkling": "guaranteed",
+    "big_white_ball": 2.0,
+    "big_white_ball_mass_control": 6.0
+  },
+  "ui_screens_suggested": [
+    "Species browser (FK creatures.json)",
+    "Owned instance editor (Potential / Sparkling / bond)",
+    "Evolution graph viewer",
+    "Resonance planner (costs null-safe)",
+    "Egg incubator timer mock",
+    "Breeding lab (100% trait inheritance toggles)",
+    "Region nurture / Prismana energy tracker"
+  ]
+}

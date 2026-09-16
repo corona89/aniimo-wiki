@@ -1,0 +1,136 @@
+{
+  "accessed": "2026-09-16",
+  "confidence_legend": ["confirmed", "marketing", "community", "unknown"],
+  "official_names": {
+    "en": "Aniimo",
+    "ko": "애니모",
+    "confidence": "confirmed"
+  },
+  "developer": {
+    "name": "Pawprint Studio",
+    "notes": "Hangzhou-based studio; first announced project. Backed by FunPlus.",
+    "confidence": "confirmed"
+  },
+  "publisher": {
+    "global": "Pawprint Studio / Pawprint Interactive Entertainment Pte. Ltd.",
+    "parent_or_investor": "FunPlus (publishing label / investment)",
+    "regional": {
+      "hong_kong_macau": "Ariel Network (community: namu.wiki)",
+      "singapore_related": "Kingsglory (FunPlus subsidiary; community: namu.wiki)"
+    },
+    "kakao_games": {
+      "status": "not_confirmed",
+      "notes": "No official store or aniimo.com page names Kakao Games as publisher. Flag as unknown for KR mobile storefront until verified.",
+      "confidence": "unknown"
+    },
+    "confidence": "confirmed"
+  },
+  "platforms": {
+    "pc_console_launch": ["Windows PC (Steam)", "Epic Games Store", "PlayStation 5", "Xbox Series X|S", "Xbox PC / Play Anywhere"],
+    "mobile_launch": ["iOS (App Store)", "Android (Google Play)"],
+    "also_mentioned": ["Xbox Cloud Gaming"],
+    "not_supported": ["PlayStation 4 (official FAQ)"],
+    "confidence": "confirmed"
+  },
+  "release_dates": {
+    "pc_console": {
+      "date": "2026-09-16",
+      "notes": "Official news: Sep 16 2026 10:00 UTC+8 (APAC). Steam store page shows Sep 15 2026 (likely Americas server / timezone). Server windows: America Sep 15 22:00 UTC-4; Europe Sep 16 02:00 UTC+0; APAC Sep 16 10:00 UTC+8.",
+      "confidence": "confirmed"
+    },
+    "mobile": {
+      "date": "2026-09-23",
+      "confidence": "confirmed"
+    }
+  },
+  "monetization": {
+    "model": "Free-to-play with in-app purchases",
+    "preorder_packs": ["Advanced Edition", "Collector's Edition"],
+    "confidence": "confirmed"
+  },
+  "age_rating": {
+    "ESRB": {
+      "rating": "E10+",
+      "descriptors": ["Fantasy Violence", "Users Interact", "In-Game Purchases"],
+      "confidence": "confirmed",
+      "sources": ["Xbox store", "GameRant / Pixelkin reporting"]
+    },
+    "GRAC_KR": {
+      "rating": null,
+      "confidence": "unknown",
+      "notes": "namu.wiki page has empty 심의 등급 field as of access; verify on GRAC or Kakao/Google Play KR listing."
+    },
+    "PEGI_CERO_other": {
+      "confidence": "unknown"
+    }
+  },
+  "official_urls": {
+    "homepage_ko": "https://www.aniimo.com/ko",
+    "homepage_en": "https://www.aniimo.com/",
+    "news_launch_pc_console": "https://www.aniimo.com/newslist/detail/100051",
+    "news_predownload": "https://www.aniimo.com/newslist/detail/100089",
+    "official_index_wiki": "https://wiki.aniimo.com/",
+    "odds_formula_ko": "https://www.aniimo.com/ko/formula-multipliers",
+    "funplus_game_page": "https://funplus.com/games/aniimo/"
+  },
+  "store_links": {
+    "steam": "https://store.steampowered.com/app/4126040/Aniimo/",
+    "steam_appid": 4126040,
+    "playstation_concept": "https://store.playstation.com/concept/10018491",
+    "playstation_marketing": "https://www.playstation.com/en-us/games/aniimo/",
+    "xbox": "https://www.xbox.com/games/store/aniimo/9pk8phlcqdf6",
+    "xbox_ko": "https://www.xbox.com/ko-KR/games/store/aniimo/9PK8PHLCQDF6",
+    "epic": null,
+    "kakao": null,
+    "app_store": null,
+    "google_play": null,
+    "notes": "Epic / mobile store direct URLs not captured as stable public pages on access day; Steam/PS/Xbox confirmed.",
+    "confidence": "confirmed"
+  },
+  "genre_tags": [
+    "open-world",
+    "creature-catching",
+    "action RPG",
+    "collection",
+    "free-to-play",
+    "multiplayer",
+    "co-op",
+    "PvP",
+    "housing / camping"
+  ],
+  "summary_en": "Aniimo is a free-to-play open-world creature-catching action RPG from Pawprint Studio (FunPlus-backed). Pathfinders explore the continent of Idyll (Korean: 에이델), capture creatures called Aniimo with Aniipods (애니팟), and Twine (트와인) with them to personally use their traversal and combat abilities. Most lines can evolve; forms and spawns shift with region, weather, and time of day. Players customize a personal RV / Homeland, join co-op and PvP (including Egg Heist), and travel to the sky city Astra. PC and consoles launched 2026-09-16; mobile follows ~2026-09-23.",
+  "summary_ko": "애니모는 Pawprint Studio(FunPlus 계열)가 만든 무료 플레이 오픈월드 몬스터 포획 액션 RPG다. 플레이어(탐구자/모험가)는 에이델 대륙을 탐험하며 애니팟으로 생명체 '애니모'를 포획하고, 트와인으로 합체해 이동·퍼즐·전투 능력을 직접 사용한다. 대부분 진화가 가능하며 지역·날씨·시간에 따라 출현과 형태가 달라진다. 개인 RV/홈랜드 꾸미기, 협동·대전(다이아몬드 에그 하이스트 등), 하늘 도시 아스트라가 포함된다. PC·콘솔은 2026-09-16 출시, 모바일은 약 2026-09-23이다.",
+  "naming_ambiguities": {
+    "world": {
+      "en": "Idyll",
+      "ko": "에이델 (에이델 대륙)",
+      "notes": "English marketing consistently uses Idyll; Korean press and Xbox KO copy use 에이델. Treat as EN/KO pair, not two different places.",
+      "confidence": "confirmed"
+    },
+    "sky_city": {
+      "en": "Astra",
+      "ko": "아스트라",
+      "confidence": "community"
+    },
+    "player_title": {
+      "en": ["Pathfinder", "Wayfarer (rank names e.g. Junior Wayfarer)"],
+      "ko": ["탐구자", "모험가", "개척자 (community guides)"],
+      "confidence": "marketing"
+    },
+    "capture_item": {
+      "en": ["Aniipod", "Aniipods"],
+      "ko": "애니팟",
+      "confidence": "confirmed"
+    },
+    "twine": {
+      "en": ["Twine", "Twining"],
+      "ko": "트와인",
+      "confidence": "confirmed"
+    },
+    "dex": {
+      "en": ["Aniilog", "Research Notebook"],
+      "ko": "연구 수첩",
+      "confidence": "confirmed"
+    }
+  }
+}

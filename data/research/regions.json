@@ -1,0 +1,358 @@
+{
+  "world": {
+    "name_en": "Idyll",
+    "name_ko": "에이델",
+    "name_ko_alt": [
+      "에이델 대륙"
+    ],
+    "confidence": "confirmed",
+    "notes": "EN Idyll = KO 에이델 localization pair."
+  },
+  "region_count_notes": {
+    "fextralife_stated": 15,
+    "aniimotools_stated": "15 + Island of Peace (beta)",
+    "aniimoguide_habitats": 16,
+    "confidence": "community"
+  },
+  "regions": [
+    {
+      "id": "argent-strait",
+      "name_en": "Argent Strait",
+      "name_ko": null,
+      "biome_notes": "Strait / coastal waterway (name implication only).",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://fextralife.com/wiki/aniimo/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "beast-fang-ridge",
+      "name_en": "Beast Fang Ridge",
+      "name_ko": null,
+      "biome_notes": "Ridge / mountain terrain (name implication).",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "berylline-causeway",
+      "name_en": "Berylline Causeway",
+      "name_ko": null,
+      "biome_notes": "Causeway; related habitat Berylline Vale appears separately on Aniidex (1 entry) — relationship unknown.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "blitzwood",
+      "name_en": "Blitzwood",
+      "name_ko": null,
+      "biome_notes": "Thunder-struck wood; gray scorched soil; Bolties / electric sparks (aniimotools blurb).",
+      "weather_notes": "Lightning-associated; thunderstorm weather spawns documented on community weather page.",
+      "level_band": "29+",
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/regions/",
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "brightbough-plateau",
+      "name_en": "Brightbough Plateau",
+      "name_ko": null,
+      "biome_notes": "Plateau / wooded high ground (name implication).",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "driftwise-meadow",
+      "name_en": "Driftwise Meadow",
+      "name_ko": null,
+      "biome_notes": "Meadow.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "echoback-landing",
+      "name_en": "Echoback Landing",
+      "name_ko": null,
+      "biome_notes": "Coastal/landing; lore of enormous stranded Aniimo and Echoback singing (aniimotools).",
+      "weather_notes": null,
+      "level_band": "38-44",
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/regions/",
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "forest-of-falling-stars",
+      "name_en": "Forest of Falling Stars",
+      "name_ko": null,
+      "biome_notes": "Dense purple forest; starine trees; Celestis glide like shooting stars (aniimotools).",
+      "weather_notes": null,
+      "level_band": "20-25",
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/regions/",
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "mistwoods",
+      "name_en": "Mistwoods",
+      "name_ko": "안개숲",
+      "name_ko_confidence": "community",
+      "biome_notes": "Mist, withered twigs, swamp with poisonous miasma; glimmer fruits as lamps (aniimotools). Inven mentions 안개숲 swamp vs riverside spawn differences.",
+      "weather_notes": null,
+      "level_band": "37-41",
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/regions/",
+        "https://www.inven.co.kr/webzine/news/?news=320527",
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "nimbus-fields",
+      "name_en": "Nimbus Fields",
+      "name_ko": null,
+      "biome_notes": "Thick grassland; soft clouds; Nimbis bounce (aniimotools).",
+      "weather_notes": "Rain-associated Nimbi lore quoted on weather page.",
+      "level_band": "17-21",
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/regions/",
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "rosetower-wood",
+      "name_en": "Rosetower Wood",
+      "name_en_alt": [
+        "Rosetower Woods"
+      ],
+      "name_ko": null,
+      "biome_notes": "Woodland; Towerwood form morph name appears in form lists.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "russet-highlands",
+      "name_en": "Russet Highlands",
+      "name_ko": null,
+      "biome_notes": "Highlands; Aniidex lists high habitat count (22).",
+      "weather_notes": "Highland Form regional morphs common in catalog.",
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "sea-of-flowers",
+      "name_en": "Sea of Flowers",
+      "name_ko": null,
+      "biome_notes": "Endless flower fields; perfume village among purple flowers (aniimotools).",
+      "weather_notes": "Sea of Flowers Form regional morphs.",
+      "level_band": "23-29",
+      "notable_landmarks": [
+        "Perfume village (unnamed in source)"
+      ],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/regions/",
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes"
+      ]
+    },
+    {
+      "id": "tideblossom-coast",
+      "name_en": "Tideblossom Coast",
+      "name_ko": null,
+      "biome_notes": "Coastal.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "zephyrus-landbridge",
+      "name_en": "Zephyrus Landbridge",
+      "name_ko": null,
+      "biome_notes": "Landbridge (wind-named).",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "listed_as_region",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "breezy-plains",
+      "name_en": "Breezy Plains",
+      "name_ko": null,
+      "biome_notes": "Described by aniimotools as starting region / interactive map focus. NOT in Fextralife 15-region gallery — possible umbrella, rename, or habitat-level name.",
+      "weather_notes": "Weather spawns documented for early levels (Lv 5–15 on weather page snippets).",
+      "level_band": "5-15 (community weather page snippets; verify)",
+      "notable_landmarks": [],
+      "status": "map_focus_name_ambiguous_vs_fextralife15",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimotools.dev/map/",
+        "https://aniimotools.dev/systems/weather/"
+      ]
+    },
+    {
+      "id": "crescent-bay",
+      "name_en": "Crescent Bay",
+      "name_ko": null,
+      "biome_notes": "Bay / coastal habitat; listed on Aniidex habitats (11) and weather spawn sections (Lv 51–55 snippets).",
+      "weather_notes": "Has dedicated weather-spawn entries on aniimotools weather page.",
+      "level_band": "51-55 (community; verify)",
+      "notable_landmarks": [],
+      "status": "habitat_or_region_ambiguous",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimoguide.com/aniidex",
+        "https://aniimotools.dev/systems/weather/",
+        "https://wiki.aniimo.com/item/10002748"
+      ]
+    },
+    {
+      "id": "island-of-peace",
+      "name_en": "Island of Peace",
+      "name_ko": null,
+      "biome_notes": "Water-themed region introduced in Global CBT / CB builds.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "beta_region_launch_permanence_unconfirmed",
+      "confidence": "marketing",
+      "source_urls": [
+        "https://funplus.com/aniimo-announces-global-close-beta-test-and-launch-window/",
+        "https://aniimotools.dev/regions/island-of-peace/",
+        "https://aniimotools.dev/map/"
+      ]
+    },
+    {
+      "id": "whale-splash-coast",
+      "name_en": null,
+      "name_ko": "고래첨벙 해안",
+      "biome_notes": "Official KO Aniimo Index habitat for 수줍달 (Susuta) and related; EN map name mapping unknown — do not equate without source.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "official_ko_habitat_en_mapping_unknown",
+      "confidence": "confirmed",
+      "source_urls": [
+        "https://wiki.aniimo.com/ko/item/10003302",
+        "https://wiki.aniimo.com/ko/item/10003298"
+      ]
+    },
+    {
+      "id": "seagull-bay",
+      "name_en": null,
+      "name_ko": "갈매기 만",
+      "biome_notes": "Official KO Index appearance region for 싹크랩 beach-related entry; EN mapping unknown.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "official_ko_habitat_en_mapping_unknown",
+      "confidence": "confirmed",
+      "source_urls": [
+        "https://wiki.aniimo.com/ko/item/10003314"
+      ]
+    },
+    {
+      "id": "berylline-vale",
+      "name_en": "Berylline Vale",
+      "name_ko": null,
+      "biome_notes": "Appears as habitat with 1 Aniimo on Aniidex; may be sub-area of Berylline Causeway — unknown.",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [],
+      "status": "habitat_subarea_unknown",
+      "confidence": "community",
+      "source_urls": [
+        "https://aniimoguide.com/aniidex"
+      ]
+    },
+    {
+      "id": "astra",
+      "name_en": "Astra",
+      "name_ko": "아스트라",
+      "biome_notes": "Sky-floating metropolis; hub for Pathfinders / competitive content (not a wild Idyll field region).",
+      "weather_notes": null,
+      "level_band": null,
+      "notable_landmarks": [
+        "Polaris Academy / 폴라리스 아카데미 (community)"
+      ],
+      "status": "hub_city_not_field_region",
+      "confidence": "marketing",
+      "source_urls": [
+        "https://www.playstation.com/en-us/games/aniimo/",
+        "https://www.inven.co.kr/webzine/news/?news=320527",
+        "https://aniimoguide.com/news/aniimo-beginner-guide-what-to-expect"
+      ]
+    }
+  ]
+}
