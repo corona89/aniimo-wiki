@@ -1,6 +1,6 @@
 import { ConfidenceChip } from "@/components/ConfidenceChip";
 import { CreatureBrowser } from "@/components/CreatureBrowser";
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { PageHeader } from "@/components/PageHeader";
 import { getT } from "@/lib/i18n";
 import { creatureNamingFlags, creatureRosterNotes, creatures } from "@/lib/research";
@@ -51,7 +51,7 @@ export default async function CreaturesPage() {
             </p>
           </article>
         </div>
-        <EditLink file="data/research/creatures.json" />
+        <AdminEditLink file="data/research/creatures.json" />
       </div>
 
       <p className="mb-4 text-xs text-[var(--muted)]">{t.detail.fanArtNote}</p>

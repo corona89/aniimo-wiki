@@ -1,5 +1,5 @@
 import { ConfidenceChip } from "@/components/ConfidenceChip";
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { NamePair } from "@/components/NamePair";
 import { PageHeader } from "@/components/PageHeader";
 import { getT } from "@/lib/i18n";
@@ -61,7 +61,7 @@ export default async function MapsPage() {
       />
 
       <div className="mb-8 flex justify-end">
-        <EditLink file="data/research/maps.md" />
+        <AdminEditLink file="data/research/maps.md" />
       </div>
 
       <section className="wiki-card relative min-h-[280px] overflow-hidden p-6">

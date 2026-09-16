@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ConfidenceChip } from "@/components/ConfidenceChip";
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { Hero, LinkButton, LinkCard, SectionHeading, Stat } from "@/components/ui";
 import { CONFIDENCE_LABEL } from "@/lib/labels";
 import { getT } from "@/lib/i18n";
@@ -118,7 +118,7 @@ export default async function HomePage() {
           <a className="link-moss" href={meta.official_urls.official_index_wiki}>
             {t.common.officialIndex}: wiki.aniimo.com
           </a>
-          <EditLink file="data/research/meta.json" />
+          <AdminEditLink file="data/research/meta.json" />
         </p>
       </section>
     </div>

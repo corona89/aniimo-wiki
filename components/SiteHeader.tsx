@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AuthControls } from "@/components/AuthControls";
 import { LocaleToggle } from "@/components/LocaleToggle";
 import { getT } from "@/lib/i18n";
 
@@ -47,6 +48,7 @@ export async function SiteHeader() {
             ))}
           </nav>
           <LocaleToggle />
+          <AuthControls />
         </div>
       </div>
     </header>

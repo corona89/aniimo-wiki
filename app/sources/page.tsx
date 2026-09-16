@@ -1,4 +1,4 @@
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionHeading } from "@/components/ui";
 import { getT } from "@/lib/i18n";
@@ -27,7 +27,7 @@ export default async function SourcesPage() {
       />
 
       <div className="mb-8">
-        <EditLink file="data/research/sources.json" />
+        <AdminEditLink file="data/research/sources.json" />
       </div>
 
       <div className="space-y-10">

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ConfidenceChip } from "@/components/ConfidenceChip";
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { NamePair } from "@/components/NamePair";
 import { PageHeader } from "@/components/PageHeader";
 import { ElementBadge, LinkButton, SectionHeading, StatBar } from "@/components/ui";
@@ -186,7 +186,7 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
         <LinkButton href="/creatures" variant="ghost">
           {t.common.backToDex}
         </LinkButton>
-        <EditLink file="data/research/creatures.json" />
+        <AdminEditLink file="data/research/creatures.json" />
       </div>
     </div>
   );

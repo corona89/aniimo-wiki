@@ -1,5 +1,5 @@
 import { ConfidenceChip } from "@/components/ConfidenceChip";
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { PageHeader } from "@/components/PageHeader";
 import { getT } from "@/lib/i18n";
 import { trainingSchema } from "@/lib/research";
@@ -31,7 +31,7 @@ export default async function SystemsPage() {
       />
 
       <div className="mb-8 flex justify-end">
-        <EditLink file="data/research/systems.md" />
+        <AdminEditLink file="data/research/systems.md" />
       </div>
 
       <div className="grid gap-6">

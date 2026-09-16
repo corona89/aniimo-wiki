@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ConfidenceChip } from "@/components/ConfidenceChip";
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { NamePair } from "@/components/NamePair";
 import { PageHeader } from "@/components/PageHeader";
 import { getT } from "@/lib/i18n";
@@ -25,7 +25,7 @@ export default async function WorldPage() {
       />
 
       <div className="mb-8 flex justify-end">
-        <EditLink file="data/research/regions.json" />
+        <AdminEditLink file="data/research/regions.json" />
       </div>
 
       <section className="wiki-card p-6">

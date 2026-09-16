@@ -1,4 +1,4 @@
-import { EditLink } from "@/components/EditLink";
+import { AdminEditLink } from "@/components/AdminEditLink";
 import { PageHeader } from "@/components/PageHeader";
 import { TrainingLab } from "@/components/TrainingLab";
 import { getT } from "@/lib/i18n";
@@ -42,7 +42,7 @@ export default async function TrainingPage() {
             <p className="mt-2 text-[var(--ink-soft)]">{t.training.banBody}</p>
           </article>
         </div>
-        <EditLink file="data/research/training-sim-schema.json" />
+        <AdminEditLink file="data/research/training-sim-schema.json" />
       </div>
 
       <TrainingLab
