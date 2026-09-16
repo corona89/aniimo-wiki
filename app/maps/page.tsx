@@ -1,9 +1,10 @@
 import { ConfidenceChip } from "@/components/ConfidenceChip";
 import { AdminEditLink } from "@/components/AdminEditLink";
+import { MapPlanner } from "@/components/MapPlanner";
 import { NamePair } from "@/components/NamePair";
 import { PageHeader } from "@/components/PageHeader";
 import { getT } from "@/lib/i18n";
-import { mapCollection, regionDisplayName, regions } from "@/lib/research";
+import { regionDisplayName, regions } from "@/lib/research";
 
 const MARKER_TYPES = [
   "spawn_aniimo",
@@ -64,19 +65,10 @@ export default async function MapsPage() {
         <AdminEditLink file="data/research/maps.md" />
       </div>
 
-      <section className="wiki-card relative min-h-[280px] overflow-hidden p-6">
-        <div className="absolute inset-0 opacity-40">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_30%_40%,#9cc3a8_0%,transparent_42%),radial-gradient(circle_at_70%_60%,#8eb6c4_0%,transparent_45%)]" />
-        </div>
-        <div className="relative">
-          <p className="kicker">FeatureCollection</p>
-          <h2 className="mt-2 font-display text-3xl">{t.maps.layerEmpty}</h2>
-          <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--ink-soft)]">
-            features: {mapCollection.features.length} · coordinate_system.kind:{" "}
-            {mapCollection.meta.coordinate_system.kind} · {mapCollection.meta.policy}
-          </p>
-          <p className="mt-4 font-mono text-xs text-[var(--muted)]">geometry = null until verified</p>
-        </div>
+      <section className="mb-10">
+        <h2 className="font-display text-2xl">{t.maps.plannerTitle}</h2>
+        <p className="mt-2 mb-4 max-w-3xl text-sm leading-7 text-[var(--ink-soft)]">{t.maps.plannerNote}</p>
+        <MapPlanner />
       </section>
 
       <section className="mt-8 wiki-card p-6">
