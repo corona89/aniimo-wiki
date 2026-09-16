@@ -36,6 +36,36 @@ export function isAuthConfigured(): boolean {
   return Boolean(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET && process.env.AUTH_SECRET);
 }
 
+/** Username/password (credentials) login is available when a hash + signing secret exist. */
+export function isPasswordConfigured(): boolean {
+  return Boolean(process.env.ADMIN_PASSWORD_HASH && process.env.AUTH_SECRET);
+}
+
+export function adminUsername(): string {
+  return (process.env.ADMIN_USERNAME ?? "cpar2002@gmail.com").trim().toLowerCase();
+}
+
+/** scrypt hash format: "scrypt:<saltHex>:<hashHex>". */
+export function hashPassword(password: string): string {
+  const salt = crypto.randomBytes(16);
+  const derived = crypto.scryptSync(password, salt, 64);
+  return `scrypt:${salt.toString("hex")}:${derived.toString("hex")}`;
+}
+
+export function verifyPassword(password: string): boolean {
+  const stored = process.env.ADMIN_PASSWORD_HASH;
+  if (!stored) return false;
+  const [scheme, saltHex, hashHex] = stored.split(":");
+  if (scheme !== "scrypt" || !saltHex || !hashHex) return false;
+  try {
+    const derived = crypto.scryptSync(password, Buffer.from(saltHex, "hex"), 64);
+    const expected = Buffer.from(hashHex, "hex");
+    return derived.length === expected.length && crypto.timingSafeEqual(derived, expected);
+  } catch {
+    return false;
+  }
+}
+
 /** Bootstrap admin(s) that are always allowed, even without ADMIN_EMAILS set. */
 const INITIAL_ADMINS = ["cpar2002@gmail.com"];
 
@@ -44,7 +74,9 @@ export function adminEmails(): string[] {
     .split(",")
     .map((email) => email.trim().toLowerCase())
     .filter(Boolean);
-  return Array.from(new Set([...INITIAL_ADMINS.map((e) => e.toLowerCase()), ...fromEnv]));
+  return Array.from(
+    new Set([...INITIAL_ADMINS.map((e) => e.toLowerCase()), adminUsername(), ...fromEnv]),
+  );
 }
 
 export async function getSession(): Promise<Session | null> {

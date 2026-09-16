@@ -1,7 +1,7 @@
 import { EditLink } from "@/components/EditLink";
 import { PageHeader } from "@/components/PageHeader";
 import { LinkButton } from "@/components/ui";
-import { getAdmin, isAuthConfigured } from "@/lib/auth";
+import { adminUsername, getAdmin, isAuthConfigured, isPasswordConfigured } from "@/lib/auth";
 import { getT } from "@/lib/i18n";
 
 export async function generateMetadata() {
@@ -23,7 +23,9 @@ const DATA_FILES = [
 export default async function AdminPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
   const { t } = await getT();
   const { error } = await searchParams;
-  const configured = isAuthConfigured();
+  const googleConfigured = isAuthConfigured();
+  const passwordConfigured = isPasswordConfigured();
+  const configured = googleConfigured || passwordConfigured;
   const { email, isAdmin } = await getAdmin();
 
   const errorMessage =
@@ -31,9 +33,11 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
       ? t.auth.loginErrorState
       : error === "email"
         ? t.auth.loginErrorEmail
-        : error === "config" || error === "token"
-          ? t.auth.loginErrorConfig
-          : null;
+        : error === "cred"
+          ? t.auth.loginErrorCred
+          : error === "config" || error === "token"
+            ? t.auth.loginErrorConfig
+            : null;
 
   return (
     <div>
@@ -76,20 +80,60 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
           <p className="mx-auto mt-3 max-w-md text-sm leading-7 text-[var(--ink-soft)]">
             {email ? t.auth.notAdmin : t.auth.adminOnlyDesc}
           </p>
-          <div className="mt-6 flex justify-center">
-            {configured ? (
-              email ? (
+          <div className="mx-auto mt-6 max-w-sm">
+            {!configured ? (
+              <span className="chip chip-unknown">{t.auth.notConfigured}</span>
+            ) : email ? (
+              <div className="flex justify-center">
                 <LinkButton href="/api/auth/logout" variant="ghost" external>
                   {t.auth.logout}
                 </LinkButton>
-              ) : (
-                <a href="/api/auth/google/login" className="btn btn-primary">
-                  <span aria-hidden>🔑</span>
-                  {t.auth.signInGoogle}
-                </a>
-              )
+              </div>
             ) : (
-              <span className="chip chip-unknown">{t.auth.notConfigured}</span>
+              <div className="space-y-4">
+                {googleConfigured ? (
+                  <a href="/api/auth/google/login" className="btn btn-primary w-full">
+                    <span aria-hidden>🔑</span>
+                    {t.auth.signInGoogle}
+                  </a>
+                ) : null}
+
+                {googleConfigured && passwordConfigured ? (
+                  <div className="flex items-center gap-3 text-xs text-[var(--muted)]">
+                    <span className="h-px flex-1 bg-[var(--line)]" />
+                    {t.auth.orDivider}
+                    <span className="h-px flex-1 bg-[var(--line)]" />
+                  </div>
+                ) : null}
+
+                {passwordConfigured ? (
+                  <form method="post" action="/api/auth/password" className="space-y-3 text-left">
+                    <label className="block text-sm">
+                      {t.auth.username}
+                      <input
+                        name="username"
+                        type="text"
+                        autoComplete="username"
+                        defaultValue={adminUsername()}
+                        className="mt-1 w-full rounded-xl border border-[var(--line)] bg-[var(--paper-2)] px-3 py-2"
+                      />
+                    </label>
+                    <label className="block text-sm">
+                      {t.auth.password}
+                      <input
+                        name="password"
+                        type="password"
+                        autoComplete="current-password"
+                        required
+                        className="mt-1 w-full rounded-xl border border-[var(--line)] bg-[var(--paper-2)] px-3 py-2"
+                      />
+                    </label>
+                    <button type="submit" className="btn btn-primary w-full">
+                      {t.auth.signIn}
+                    </button>
+                  </form>
+                ) : null}
+              </div>
             )}
           </div>
         </section>

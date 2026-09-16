@@ -1,9 +1,9 @@
-import { getAdmin, isAuthConfigured } from "@/lib/auth";
+import { getAdmin, isAuthConfigured, isPasswordConfigured } from "@/lib/auth";
 import { getT } from "@/lib/i18n";
 
 export async function AuthControls() {
   const { t } = await getT();
-  const configured = isAuthConfigured();
+  const configured = isAuthConfigured() || isPasswordConfigured();
   const { email, isAdmin } = await getAdmin();
 
   if (email) {
@@ -25,7 +25,7 @@ export async function AuthControls() {
   if (!configured) return null;
 
   return (
-    <a href="/api/auth/google/login" className="btn btn-ghost px-3 py-1.5 text-xs">
+    <a href="/admin" className="btn btn-ghost px-3 py-1.5 text-xs">
       <span aria-hidden>🔑</span>
       {t.auth.adminLogin}
     </a>
