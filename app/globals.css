@@ -1,90 +1,271 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f3ecdc;
-  --paper-2: #fff8eb;
-  --ink: #16241c;
-  --ink-soft: #3c4a40;
-  --muted: #6d7368;
-  --line: color-mix(in oklab, #2c4a38 18%, var(--paper));
-  --moss: #2f5d45;
-  --moss-soft: #dce8d8;
-  --moss-deep: #143326;
-  --gold: #b07a2a;
-  --water: #2f6f86;
-  --fire: #b24a2c;
-  --earth: #8a6a3a;
-  --light: #c9a24a;
+  /* Surfaces */
+  --paper: #eef3ea;
+  --paper-2: #fbfdf8;
+  --surface: #ffffff;
+
+  /* Ink */
+  --ink: #14231b;
+  --ink-soft: #3a4a40;
+  --muted: #6b7469;
+  --line: color-mix(in oklab, #2c4a38 16%, var(--paper));
+
+  /* Brand — Idyll nature + Astra sky */
+  --moss: #2f7d54;
+  --moss-2: #3f9c69;
+  --moss-soft: #dcefe0;
+  --moss-deep: #10321f;
+  --sky: #2f7f9e;
+  --sky-soft: #d9edf3;
+  --gold: #c98a2b;
+  --gold-soft: #f6e6c6;
+  --berry: #8a4bd0;
+
+  /* Element colors (9) */
+  --fire: #e5602f;
+  --water: #2f78c4;
+  --grass: #43a047;
+  --lightning: #e0a52b;
+  --earth: #9a6b3b;
+  --wind: #5aa88f;
+  --dark: #5b4a86;
+  --ice: #57b6c9;
+  --light: #d8a93a;
+
+  /* Shape */
+  --radius: 1.15rem;
+  --radius-lg: 1.6rem;
+  --shadow-card: 0 12px 34px color-mix(in oklab, var(--moss-deep) 10%, transparent);
+  --shadow-soft: 0 6px 18px color-mix(in oklab, var(--moss-deep) 7%, transparent);
 }
 
 @theme inline {
   --color-background: var(--paper);
   --color-foreground: var(--ink);
   --font-sans: var(--font-sans-kr);
-  --font-serif: var(--font-serif-kr);
+  --font-display: var(--font-display-kr);
 }
 
 html {
   background: var(--paper);
+  scroll-behavior: smooth;
 }
 
 body {
-  background:
-    radial-gradient(1200px 500px at 10% -10%, color-mix(in oklab, var(--gold) 16%, transparent), transparent 55%),
-    radial-gradient(900px 420px at 100% 0%, color-mix(in oklab, var(--water) 12%, transparent), transparent 50%),
-    var(--paper);
   color: var(--ink);
   font-family: var(--font-sans-kr), "Noto Sans KR", sans-serif;
+  background:
+    radial-gradient(1100px 480px at 8% -8%, color-mix(in oklab, var(--gold) 14%, transparent), transparent 55%),
+    radial-gradient(900px 460px at 100% 0%, color-mix(in oklab, var(--sky) 13%, transparent), transparent 52%),
+    radial-gradient(800px 500px at 50% 110%, color-mix(in oklab, var(--moss) 12%, transparent), transparent 55%),
+    var(--paper);
 }
 
+/* Soft animated aurora behind content */
+.site-aurora {
+  position: fixed;
+  inset: -20% -10% auto -10%;
+  height: 60vh;
+  z-index: -1;
+  background:
+    radial-gradient(520px 320px at 20% 30%, color-mix(in oklab, var(--moss) 22%, transparent), transparent 60%),
+    radial-gradient(460px 300px at 80% 20%, color-mix(in oklab, var(--sky) 20%, transparent), transparent 60%);
+  filter: blur(30px);
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--moss) 30%, transparent);
+}
+
+/* Typography helpers */
+.font-display {
+  font-family: var(--font-display-kr), var(--font-sans-kr), sans-serif;
+  letter-spacing: 0.01em;
+}
+.kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Cards */
+.wiki-card {
+  background: color-mix(in oklab, var(--surface) 92%, var(--paper-2));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+.card-hover {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 44px color-mix(in oklab, var(--moss-deep) 16%, transparent);
+  border-color: color-mix(in oklab, var(--moss) 40%, var(--line));
+}
+.glass {
+  background: color-mix(in oklab, var(--surface) 70%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1;
+  border: 1px solid transparent;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--moss-2), var(--moss));
+  color: #f4fbf4;
+  box-shadow: 0 8px 18px color-mix(in oklab, var(--moss) 40%, transparent);
+}
+.btn-primary:hover {
+  box-shadow: 0 12px 24px color-mix(in oklab, var(--moss) 48%, transparent);
+}
+.btn-ghost {
+  background: color-mix(in oklab, var(--surface) 75%, transparent);
+  border-color: var(--line);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  border-color: color-mix(in oklab, var(--moss) 45%, var(--line));
+  color: var(--moss-deep);
+}
+
+/* Chips / badges */
 .chip {
   display: inline-flex;
   align-items: center;
+  gap: 0.32rem;
   border-radius: 999px;
-  padding: 0.12rem 0.55rem;
+  padding: 0.14rem 0.6rem;
   font-size: 0.68rem;
-  font-weight: 650;
-  letter-spacing: 0.04em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
-
+.chip-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.85;
+}
 .chip-confirmed {
-  background: #e4f3e8;
+  background: #e2f5e8;
   color: #1b6b3a;
-  border-color: #b7ddc2;
+  border-color: #b3ddc1;
 }
-
 .chip-marketing {
-  background: #f8edd6;
+  background: #f8ecd4;
   color: #8a5a12;
-  border-color: #e4c78a;
+  border-color: #e6c98c;
 }
-
 .chip-community {
-  background: #e3eef4;
-  color: #21586c;
-  border-color: #b7d3e0;
+  background: #e0eef6;
+  color: #215a72;
+  border-color: #b5d5e4;
 }
-
 .chip-unknown {
   background: #ece8df;
   color: #5c574e;
   border-color: #d3cdc2;
 }
 
-.wiki-card {
-  background: color-mix(in oklab, var(--paper-2) 86%, white);
-  border: 1px solid var(--line);
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 30px color-mix(in oklab, var(--moss-deep) 6%, transparent);
+/* Element badges */
+.elem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0.16rem 0.62rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, #000 12%, transparent);
+}
+.elem-icon {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
+/* Stat bars */
+.statbar-track {
+  height: 0.5rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--moss) 12%, var(--paper-2));
+  overflow: hidden;
+}
+.statbar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--moss-2), var(--gold));
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, color-mix(in oklab, var(--moss-deep) 4%, transparent) 0%, color-mix(in oklab, var(--moss-deep) 72%, transparent) 100%),
+    linear-gradient(90deg, color-mix(in oklab, var(--moss-deep) 55%, transparent) 0%, transparent 62%);
+}
+
+/* Prose */
 .prose-wiki p + p {
   margin-top: 0.85rem;
 }
-
 .prose-wiki a {
   color: var(--moss);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.link-moss {
+  color: var(--moss);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.link-moss:hover {
+  color: var(--moss-deep);
 }

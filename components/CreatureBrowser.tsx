@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ConfidenceChip } from "@/components/ConfidenceChip";
 import { NamePair } from "@/components/NamePair";
+import { ElementBadge } from "@/components/ui";
 import { elementLabel } from "@/lib/labels";
 import type { Creature } from "@/lib/types";
 
@@ -63,7 +64,7 @@ export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((creature) => (
           <li key={creature.id}>
-            <Link href={`/creatures/${creature.slug}`} className="wiki-card block h-full p-4 hover:-translate-y-0.5">
+            <Link href={`/creatures/${creature.slug}`} className="wiki-card card-hover block h-full p-4">
               <div className="flex items-start justify-between gap-3">
                 <p className="font-mono text-xs text-[var(--muted)]">
                   {creature.aniilog_no ? `NO.${creature.aniilog_no}` : "번호 없음"}
@@ -73,10 +74,10 @@ export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
               <div className="mt-2">
                 <NamePair ko={creature.name_ko} en={creature.name_en} />
               </div>
-              <p className="mt-3 text-xs text-[var(--muted)]">
-                {elementLabel(creature.element)}
-                {creature.role_ko ? ` · ${creature.role_ko}` : ""}
-              </p>
+              <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                <ElementBadge element={creature.element} compact />
+                {creature.role_ko ? <span className="chip chip-confirmed">{creature.role_ko}</span> : null}
+              </div>
             </Link>
           </li>
         ))}

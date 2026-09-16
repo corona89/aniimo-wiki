@@ -144,7 +144,7 @@ export function TrainingLab({
 
       {tab === "evo" ? (
         <section className="wiki-card p-6 text-sm leading-7">
-          <h2 className="font-serif text-2xl">문서화된 분기만</h2>
+          <h2 className="font-display text-2xl">문서화된 분기만</h2>
           <p className="mt-2 text-[var(--ink-soft)]">
             스키마 예시: Pebbling → Geodeback(땅) 또는 Lavazar(불). 재료 ID는 unknown.
           </p>
@@ -172,7 +172,7 @@ export function TrainingLab({
 
       {tab === "resonance" ? (
         <section className="wiki-card p-6 text-sm">
-          <h2 className="font-serif text-2xl">공명 플래너</h2>
+          <h2 className="font-display text-2xl">공명 플래너</h2>
           <p className="mt-2 text-[var(--ink-soft)]">
             아스트라나이트 Basic / Standard / Advanced를 소비한다고 알려져 있습니다. 레벨당 스탯 증가와 비용 테이블은
             가이드도 “미공개”라고 하므로 모두 null입니다.
@@ -198,7 +198,7 @@ export function TrainingLab({
 
       {tab === "egg" ? (
         <section className="wiki-card p-6 text-sm leading-7">
-          <h2 className="font-serif text-2xl">알 · Hatchinator</h2>
+          <h2 className="font-display text-2xl">알 · Hatchinator</h2>
           <ul className="mt-3 list-disc pl-5 text-[var(--ink-soft)]">
             <li>
               수줍달 신비한 알 — 사전예약 보상 <ConfidenceChip value="confirmed" compact />
@@ -216,7 +216,7 @@ export function TrainingLab({
 
       {tab === "breed" ? (
         <section className="wiki-card p-6 text-sm leading-7">
-          <h2 className="font-serif text-2xl">교배 랩</h2>
+          <h2 className="font-display text-2xl">교배 랩</h2>
           <p className="text-[var(--ink-soft)]">
             게임 텍스트를 인용한 커뮤니티 규칙: 지정 부모의 스파클·천휘 형태는 100% 유전. 그 외 IV/잠재력 공식은
             unknown.
@@ -243,7 +243,7 @@ export function TrainingLab({
 
       {tab === "nurture" ? (
         <section className="wiki-card p-6 text-sm leading-7">
-          <h2 className="font-serif text-2xl">지맥 / 천휘 트래커</h2>
+          <h2 className="font-display text-2xl">지맥 / 천휘 트래커</h2>
           <p>
             공식 육성 확률: 천휘 즉시 {nurture.prismana_instant_chance * 100}% · 에너지 +{nurture.prismana_energy_gain} ·
             소프트 피티 {nurture.prismana_energy_soft_pity}{" "}

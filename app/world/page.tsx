@@ -11,13 +11,15 @@ export default function WorldPage() {
   return (
     <div>
       <PageHeader
+        image="/art/world-vista.jpg"
+        crumbs={[{ label: "홈", href: "/" }, { label: "월드 / 지역" }]}
         kicker="World / Regions"
         title="에이델 대륙"
         description="영어 Idyll과 한국어 에이델은 같은 대륙입니다. 지역 개수·영한 매핑은 커뮤니티와 공식 인덱스가 어긋난 곳이 있어, 표에 상태와 신뢰도를 그대로 둡니다."
       />
 
       <section className="wiki-card p-6">
-        <h2 className="font-serif text-2xl">세계 이름</h2>
+        <h2 className="font-display text-2xl">세계 이름</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
             <NamePair ko={worldInfo.name_ko} en={worldInfo.name_en} size="lg" />
@@ -44,7 +46,7 @@ export default function WorldPage() {
       </section>
 
       <section className="mt-8 wiki-card p-6">
-        <h2 className="font-serif text-2xl">표기 모호성</h2>
+        <h2 className="font-display text-2xl">표기 모호성</h2>
         <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--ink-soft)]">
           <li>
             Breezy Plains는 인터랙티브 맵의 시작 지점으로 나오지만 Fextralife 15 목록에는 없습니다. 관계{" "}

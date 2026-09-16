@@ -49,6 +49,7 @@ export default function MapsPage() {
   return (
     <div>
       <PageHeader
+        crumbs={[{ label: "홈", href: "/" }, { label: "지도" }]}
         kicker="Maps"
         title="지도"
         description="이 위키는 좌표를 만들지 않습니다. 아래 캔버스는 빈 GeoJSON이며, POI는 지역 단위 이름만 나열합니다."
@@ -60,7 +61,7 @@ export default function MapsPage() {
         </div>
         <div className="relative">
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--gold)]">FeatureCollection</p>
-          <h2 className="mt-2 font-serif text-3xl">레이어 비어 있음</h2>
+          <h2 className="mt-2 font-display text-3xl">레이어 비어 있음</h2>
           <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--ink-soft)]">
             features: {mapCollection.features.length} · coordinate_system.kind:{" "}
             {mapCollection.meta.coordinate_system.kind} · {mapCollection.meta.policy}
@@ -70,7 +71,7 @@ export default function MapsPage() {
       </section>
 
       <section className="mt-8 wiki-card p-6">
-        <h2 className="font-serif text-2xl">외부 맵</h2>
+        <h2 className="font-display text-2xl">외부 맵</h2>
         <ul className="mt-4 space-y-3 text-sm">
           {EXTERNAL_MAPS.map((item) => (
             <li key={item.name} className="flex flex-col gap-1 border-b border-[var(--line)] pb-3">
@@ -91,7 +92,7 @@ export default function MapsPage() {
       </section>
 
       <section className="mt-8 wiki-card p-6">
-        <h2 className="font-serif text-2xl">마커 범례 (후보 enum)</h2>
+        <h2 className="font-display text-2xl">마커 범례 (후보 enum)</h2>
         <p className="mt-2 text-sm text-[var(--ink-soft)]">
           커뮤니티 맵에서 관찰된 유형입니다. 이 저장소에는 해당 유형의 핀이 없습니다.
         </p>
@@ -105,7 +106,7 @@ export default function MapsPage() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-serif text-2xl">좌표 없는 POI (지역 단위)</h2>
+        <h2 className="font-display text-2xl">좌표 없는 POI (지역 단위)</h2>
         <p className="mt-2 text-sm text-[var(--ink-soft)]">
           region_id만 있고 lat/lng/x/y는 없습니다. 고래첨벙 해안과 갈매기 만은 EN 맵 이름을 붙이지 않습니다.
         </p>

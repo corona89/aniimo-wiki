@@ -10,7 +10,11 @@ export function NamePair({
   const primary = ko ?? en ?? "이름 미상";
   const secondary = ko && en ? en : ko ? en : en ? ko : null;
   const primaryClass =
-    size === "lg" ? "font-serif text-3xl tracking-tight" : size === "sm" ? "text-sm font-semibold" : "font-serif text-xl";
+    size === "lg"
+      ? "font-display text-3xl tracking-tight"
+      : size === "sm"
+        ? "text-sm font-semibold"
+        : "font-display text-xl";
 
   return (
     <span className="inline-flex flex-col leading-tight">

@@ -20,6 +20,7 @@ export default function SystemsPage() {
   return (
     <div>
       <PageHeader
+        crumbs={[{ label: "홈", href: "/" }, { label: "시스템" }]}
         kicker="Systems"
         title="시스템"
         description="트와인·포획·전투·진화·홈랜드. 전투 DPS와 유대 수치처럼 미공개인 값은 쓰지 않습니다."
@@ -28,7 +29,7 @@ export default function SystemsPage() {
       <div className="grid gap-6">
         <section className="wiki-card p-6">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="font-serif text-2xl">트와인</h2>
+            <h2 className="font-display text-2xl">트와인</h2>
             <ConfidenceChip value="confirmed" />
           </div>
           <p className="mt-3 text-sm leading-7 text-[var(--ink-soft)]">
@@ -40,7 +41,7 @@ export default function SystemsPage() {
 
         <section className="wiki-card p-6">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="font-serif text-2xl">포획 · 애니팟</h2>
+            <h2 className="font-display text-2xl">포획 · 애니팟</h2>
             <ConfidenceChip value={coeffs.confidence} />
           </div>
           <p className="mt-3 text-sm leading-7 text-[var(--ink-soft)]">
@@ -72,7 +73,7 @@ export default function SystemsPage() {
         </section>
 
         <section className="wiki-card p-6">
-          <h2 className="font-serif text-2xl">전투</h2>
+          <h2 className="font-display text-2xl">전투</h2>
           <p className="mt-3 text-sm leading-7 text-[var(--ink-soft)]">
             실시간 액션. 역할 라벨은 격파·딜·서포트·힐·재생입니다. 속성은 불·물·풀·번개·땅·바람·암흑·얼음·빛 아홉
             가지. 상성 1.6× / 0.625×는 커뮤니티 보고이며 인게임 표로 재확인이 필요합니다.{" "}
@@ -81,7 +82,7 @@ export default function SystemsPage() {
         </section>
 
         <section className="wiki-card p-6">
-          <h2 className="font-serif text-2xl">진화 · 형태</h2>
+          <h2 className="font-display text-2xl">진화 · 형태</h2>
           <p className="mt-3 text-sm leading-7 text-[var(--ink-soft)]">
             커뮤니티/인접 자료의 단계명은 Lumin → Gamma → Nova. 모든 라인이 3단계인 것은 아닙니다. 재료에 따른 분기
             예: Pebbling → 땅 Geodeback 또는 불 Lavazar. 지역·날씨 진화는 속성과 서식지를 바꿉니다. UI 문자열은 라이브
@@ -90,7 +91,7 @@ export default function SystemsPage() {
         </section>
 
         <section className="wiki-card p-6">
-          <h2 className="font-serif text-2xl">캠핑카 / 홈랜드</h2>
+          <h2 className="font-display text-2xl">캠핑카 / 홈랜드</h2>
           <p className="mt-3 text-sm leading-7 text-[var(--ink-soft)]">
             개인 RV를 야영지에 세우고, 홈랜드에서 작물·꾸미기·애니모 배치·제작을 합니다. Hatchinator는 실시간 부화.
             Caress 횟수(~20)와 리필 주기는 커뮤니티 관찰이며 정확한 부화 초 단위는 미공개입니다.
@@ -98,7 +99,7 @@ export default function SystemsPage() {
         </section>
 
         <section className="wiki-card p-6">
-          <h2 className="font-serif text-2xl">멀티 · 세이브</h2>
+          <h2 className="font-display text-2xl">멀티 · 세이브</h2>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--ink-soft)]">
             <li>
               솔로+멀티, PvE/PvP, Egg Heist(Lost Isles, 3인) <ConfidenceChip value="confirmed" compact />
