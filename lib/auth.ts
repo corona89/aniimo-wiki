@@ -36,11 +36,15 @@ export function isAuthConfigured(): boolean {
   return Boolean(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET && process.env.AUTH_SECRET);
 }
 
+/** Bootstrap admin(s) that are always allowed, even without ADMIN_EMAILS set. */
+const INITIAL_ADMINS = ["cpar2002@gmail.com"];
+
 export function adminEmails(): string[] {
-  return (process.env.ADMIN_EMAILS ?? "")
+  const fromEnv = (process.env.ADMIN_EMAILS ?? "")
     .split(",")
     .map((email) => email.trim().toLowerCase())
     .filter(Boolean);
+  return Array.from(new Set([...INITIAL_ADMINS.map((e) => e.toLowerCase()), ...fromEnv]));
 }
 
 export async function getSession(): Promise<Session | null> {
