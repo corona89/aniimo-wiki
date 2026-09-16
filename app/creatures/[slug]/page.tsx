@@ -39,6 +39,12 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
   const img = elementImage(creature.element);
   const relatedRegions = regionsForCreature(creature);
   const kin = relatedCreatures(creature);
+  const sourceUrls = (creature.source ?? "")
+    .split(";")
+    .map((url) => url.trim())
+    .filter(Boolean);
+  const primarySource = sourceUrls[0];
+  const primaryIsAniidex = primarySource?.includes("aniimoguide.com") ?? false;
 
   return (
     <div>
@@ -74,6 +80,21 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
               <ElementBadge element={creature.element} />
               {creature.role_ko ? <span className="chip chip-confirmed">{creature.role_ko}</span> : null}
             </div>
+            {primarySource ? (
+              <div className="mt-5 rounded-2xl border border-[var(--line)] bg-[var(--paper-2)] p-4">
+                <div className="flex flex-wrap items-center gap-3">
+                  <LinkButton href={primarySource} variant="primary" external>
+                    {primaryIsAniidex ? t.detail.viewOnAniidex : t.detail.viewOriginal} ↗
+                  </LinkButton>
+                  {sourceUrls.slice(1).map((url) => (
+                    <a key={url} href={url} className="link-moss text-xs" target="_blank" rel="noopener noreferrer">
+                      {url.replace(/^https?:\/\//, "").split("/")[0].replace(/^www\./, "")} ↗
+                    </a>
+                  ))}
+                </div>
+                {img ? <p className="mt-2 text-xs text-[var(--muted)]">{t.detail.fanArtNote}</p> : null}
+              </div>
+            ) : null}
             <dl className="mt-6 grid gap-3 text-sm sm:grid-cols-2">
               <div>
                 <dt className="text-[var(--muted)]">{t.detail.slug}</dt>

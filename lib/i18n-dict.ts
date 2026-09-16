@@ -98,6 +98,9 @@ const ko = {
     nullNote: "이 행의 종족치는 null입니다. 공식 인덱스에서 확인되기 전에는 전투 숫자를 채우지 않습니다.",
     relatedHabitats: "관련 지역",
     relatedForms: "같은 라인 / 관련 종",
+    viewOriginal: "원본 이미지 보기",
+    viewOnAniidex: "Aniidex에서 보기",
+    fanArtNote: "일러스트는 팬 제작입니다. 공식 원본 아트는 출처에서 확인하세요.",
   },
   world: {
     title: "에이델 대륙",
@@ -314,6 +317,9 @@ const en: typeof ko = {
     nullNote: "Base stats for this row are null. We do not fill in combat numbers until they are confirmed on the official index.",
     relatedHabitats: "Related regions",
     relatedForms: "Same line / related species",
+    viewOriginal: "View original image",
+    viewOnAniidex: "View on Aniidex",
+    fanArtNote: "Illustration is fan-made. See the source for the official original art.",
   },
   world: {
     title: "Continent of Idyll",

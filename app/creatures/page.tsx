@@ -54,6 +54,8 @@ export default async function CreaturesPage() {
         <EditLink file="data/research/creatures.json" />
       </div>
 
+      <p className="mb-4 text-xs text-[var(--muted)]">{t.detail.fanArtNote}</p>
+
       <CreatureBrowser creatures={creatures} />
     </div>
   );
