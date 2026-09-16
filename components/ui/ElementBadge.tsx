@@ -1,3 +1,6 @@
+"use client";
+
+import { useI18n } from "@/components/i18n/LocaleProvider";
 import { ELEMENT_KO } from "@/lib/labels";
 
 const ELEMENT_COLOR: Record<string, string> = {
@@ -19,17 +22,20 @@ export function ElementBadge({
   element?: string | null;
   compact?: boolean;
 }) {
+  const { locale, t } = useI18n();
   const color = element ? ELEMENT_COLOR[element] : undefined;
 
   if (!element || !color) {
-    return <span className="chip chip-unknown">{compact ? "속성?" : "속성 미상"}</span>;
+    return <span className="chip chip-unknown">{compact ? t.elementUnknownCompact : t.elementUnknown}</span>;
   }
 
   const ko = ELEMENT_KO[element] ?? element;
+  const label = compact ? (locale === "en" ? element : ko) : t.elementSuffix(ko, element);
+
   return (
     <span className="elem" style={{ background: color }}>
       <span className="elem-icon" />
-      {compact ? ko : `${ko} · ${element}`}
+      {label}
     </span>
   );
 }

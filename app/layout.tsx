@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Jua, Noto_Sans_KR } from "next/font/google";
+import { LocaleProvider } from "@/components/i18n/LocaleProvider";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { getLocale } from "@/lib/i18n";
 import "./globals.css";
 
 const sans = Noto_Sans_KR({
@@ -35,14 +37,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const locale = await getLocale();
+
   return (
-    <html lang="ko" className={`${sans.variable} ${display.variable} h-full antialiased`}>
+    <html lang={locale} className={`${sans.variable} ${display.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col font-sans">
         <div className="site-aurora" aria-hidden />
-        <SiteHeader />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-12">{children}</main>
-        <SiteFooter />
+        <LocaleProvider initialLocale={locale}>
+          <SiteHeader />
+          <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 sm:py-12">{children}</main>
+          <SiteFooter />
+        </LocaleProvider>
       </body>
     </html>
   );

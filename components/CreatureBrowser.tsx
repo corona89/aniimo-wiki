@@ -1,16 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ConfidenceChip } from "@/components/ConfidenceChip";
 import { NamePair } from "@/components/NamePair";
 import { ElementBadge } from "@/components/ui";
-import { elementLabel } from "@/lib/labels";
+import { useI18n } from "@/components/i18n/LocaleProvider";
+import { ELEMENT_KO } from "@/lib/labels";
+import { elementImage } from "@/lib/research";
 import type { Creature } from "@/lib/types";
 
 const ELEMENTS = ["Fire", "Water", "Grass", "Lightning", "Earth", "Wind", "Dark", "Ice", "Light"];
 
 export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
+  const { locale, t } = useI18n();
   const [query, setQuery] = useState("");
   const [element, setElement] = useState("all");
   const [onlyOfficial, setOnlyOfficial] = useState(false);
@@ -35,7 +39,7 @@ export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="이름, 번호, 슬러그 검색"
+          placeholder={t.creatures.searchPlaceholder}
           className="w-full rounded-full border border-[var(--line)] bg-[var(--paper-2)] px-4 py-2.5 text-sm outline-none ring-[var(--moss)] focus:ring-2 sm:max-w-sm"
         />
         <select
@@ -43,10 +47,10 @@ export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
           onChange={(event) => setElement(event.target.value)}
           className="rounded-full border border-[var(--line)] bg-[var(--paper-2)] px-3 py-2.5 text-sm"
         >
-          <option value="all">모든 속성</option>
+          <option value="all">{t.creatures.allElements}</option>
           {ELEMENTS.map((item) => (
             <option key={item} value={item}>
-              {elementLabel(item)}
+              {locale === "en" ? item : `${ELEMENT_KO[item] ?? item} · ${item}`}
             </option>
           ))}
         </select>
@@ -56,31 +60,56 @@ export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
             checked={onlyOfficial}
             onChange={(event) => setOnlyOfficial(event.target.checked)}
           />
-          공식 KO 확인만
+          {t.creatures.officialOnly}
         </label>
-        <p className="text-sm text-[var(--muted)]">{filtered.length}종</p>
+        <p className="text-sm text-[var(--muted)]">
+          {filtered.length}
+          {locale === "en" ? " " : ""}
+          {t.creatures.countSuffix}
+        </p>
       </div>
 
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((creature) => (
-          <li key={creature.id}>
-            <Link href={`/creatures/${creature.slug}`} className="wiki-card card-hover block h-full p-4">
-              <div className="flex items-start justify-between gap-3">
-                <p className="font-mono text-xs text-[var(--muted)]">
-                  {creature.aniilog_no ? `NO.${creature.aniilog_no}` : "번호 없음"}
-                </p>
-                <ConfidenceChip value={creature.confidence} compact />
-              </div>
-              <div className="mt-2">
-                <NamePair ko={creature.name_ko} en={creature.name_en} />
-              </div>
-              <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                <ElementBadge element={creature.element} compact />
-                {creature.role_ko ? <span className="chip chip-confirmed">{creature.role_ko}</span> : null}
-              </div>
-            </Link>
-          </li>
-        ))}
+        {filtered.map((creature) => {
+          const img = elementImage(creature.element);
+          return (
+            <li key={creature.id}>
+              <Link
+                href={`/creatures/${creature.slug}`}
+                className="wiki-card card-hover block h-full overflow-hidden"
+              >
+                <div className="relative aspect-[4/3] bg-[var(--moss-soft)]">
+                  {img ? (
+                    <Image
+                      src={img}
+                      alt=""
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="grid h-full w-full place-items-center bg-[linear-gradient(135deg,var(--paper-2),var(--moss-soft))] text-3xl">
+                      ✦
+                    </div>
+                  )}
+                  <span className="absolute left-2 top-2 rounded-full bg-black/45 px-2 py-0.5 font-mono text-[10px] text-white backdrop-blur">
+                    {creature.aniilog_no ? `NO.${creature.aniilog_no}` : t.creatures.noNumber}
+                  </span>
+                  <span className="absolute right-2 top-2">
+                    <ConfidenceChip value={creature.confidence} compact />
+                  </span>
+                </div>
+                <div className="p-4">
+                  <NamePair ko={creature.name_ko} en={creature.name_en} />
+                  <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                    <ElementBadge element={creature.element} compact />
+                    {creature.role_ko ? <span className="chip chip-confirmed">{creature.role_ko}</span> : null}
+                  </div>
+                </div>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

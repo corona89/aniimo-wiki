@@ -1,9 +1,21 @@
+import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ConfidenceChip } from "@/components/ConfidenceChip";
+import { EditLink } from "@/components/EditLink";
 import { NamePair } from "@/components/NamePair";
 import { PageHeader } from "@/components/PageHeader";
-import { ElementBadge, LinkButton, StatBar } from "@/components/ui";
-import { creatures, getCreature } from "@/lib/research";
+import { ElementBadge, LinkButton, SectionHeading, StatBar } from "@/components/ui";
+import { getT } from "@/lib/i18n";
+import {
+  creatures,
+  displayName,
+  elementImage,
+  getCreature,
+  regionDisplayName,
+  regionsForCreature,
+  relatedCreatures,
+} from "@/lib/research";
 
 export function generateStaticParams() {
   return creatures.map((creature) => ({ slug: creature.slug }));
@@ -22,85 +34,138 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
   const creature = getCreature(slug);
   if (!creature) notFound();
 
+  const { locale, t } = await getT();
   const stats = creature.official_stats_species ?? creature.stats ?? null;
+  const img = elementImage(creature.element);
+  const relatedRegions = regionsForCreature(creature);
+  const kin = relatedCreatures(creature);
 
   return (
     <div>
       <PageHeader
         crumbs={[
-          { label: "홈", href: "/" },
-          { label: "도감", href: "/creatures" },
-          { label: creature.name_ko ?? creature.name_en ?? creature.slug },
+          { label: t.nav.home, href: "/" },
+          { label: t.nav.creatures, href: "/creatures" },
+          { label: displayName(creature, locale) },
         ]}
         kicker={creature.aniilog_no ? `NO.${creature.aniilog_no}` : creature.id}
-        title={creature.name_ko ?? creature.name_en ?? creature.slug}
+        title={displayName(creature, locale)}
         description={creature.notes ?? creature.form_notes ?? undefined}
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <section className="wiki-card p-6">
-          <NamePair ko={creature.name_ko} en={creature.name_en} size="lg" />
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <ConfidenceChip value={creature.confidence} />
-            <ElementBadge element={creature.element} />
-            {creature.role_ko ? <span className="chip chip-confirmed">{creature.role_ko}</span> : null}
-          </div>
-          <dl className="mt-6 grid gap-3 text-sm sm:grid-cols-2">
-            <div>
-              <dt className="text-[var(--muted)]">슬러그</dt>
-              <dd className="font-mono">{creature.slug}</dd>
+        <section className="wiki-card overflow-hidden">
+          {img ? (
+            <div className="relative aspect-[16/9] bg-[var(--moss-soft)]">
+              <Image
+                src={img}
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 60vw"
+                className="object-cover"
+                priority
+              />
             </div>
-            <div>
-              <dt className="text-[var(--muted)]">희귀/입수</dt>
-              <dd>{creature.rarity ?? "—"}</dd>
-            </div>
-            <div className="sm:col-span-2">
-              <dt className="text-[var(--muted)]">서식지 힌트</dt>
-              <dd>{creature.habitat_region_hints?.join(" · ") || "미수록"}</dd>
-            </div>
-            <div className="sm:col-span-2">
-              <dt className="text-[var(--muted)]">확인된 형태</dt>
-              <dd>{creature.forms_known?.join(" · ") || "미수록"}</dd>
-            </div>
-          </dl>
-          {creature.source ? (
-            <p className="mt-6 text-xs">
-              출처:{" "}
-              <a className="break-all text-[var(--moss)] underline underline-offset-4" href={creature.source}>
-                {creature.source}
-              </a>
-            </p>
           ) : null}
+          <div className="p-6">
+            <NamePair ko={creature.name_ko} en={creature.name_en} size="lg" />
+            <div className="mt-4 flex flex-wrap items-center gap-2">
+              <ConfidenceChip value={creature.confidence} />
+              <ElementBadge element={creature.element} />
+              {creature.role_ko ? <span className="chip chip-confirmed">{creature.role_ko}</span> : null}
+            </div>
+            <dl className="mt-6 grid gap-3 text-sm sm:grid-cols-2">
+              <div>
+                <dt className="text-[var(--muted)]">{t.detail.slug}</dt>
+                <dd className="font-mono">{creature.slug}</dd>
+              </div>
+              <div>
+                <dt className="text-[var(--muted)]">{t.detail.rarity}</dt>
+                <dd>{creature.rarity ?? t.common.none}</dd>
+              </div>
+              <div className="sm:col-span-2">
+                <dt className="text-[var(--muted)]">{t.detail.habitatHints}</dt>
+                <dd>{creature.habitat_region_hints?.join(" · ") || t.common.notRecorded}</dd>
+              </div>
+              <div className="sm:col-span-2">
+                <dt className="text-[var(--muted)]">{t.detail.knownForms}</dt>
+                <dd>{creature.forms_known?.join(" · ") || t.common.notRecorded}</dd>
+              </div>
+            </dl>
+            {creature.source ? (
+              <p className="mt-6 text-xs">
+                {t.common.source}:{" "}
+                <a className="break-all link-moss" href={creature.source}>
+                  {creature.source}
+                </a>
+              </p>
+            ) : null}
+          </div>
         </section>
 
         <section className="wiki-card p-6">
-          <h2 className="font-display text-2xl">종족치</h2>
+          <h2 className="font-display text-2xl">{t.detail.baseStats}</h2>
           {stats ? (
             <div className="mt-4 space-y-3">
-              <StatBar label="합 (총합)" value={stats.total_attr} max={600} />
-              <StatBar label="HP" value={stats.hp} />
-              <StatBar label="무력화" value={stats.break} />
-              <StatBar label="공격" value={stats.attack} />
-              <StatBar label="마법 방어" value={stats.magic_def} />
-              <StatBar label="물리 방어" value={stats.phys_def} />
-              <StatBar label="에너지 회복" value={stats.energy_regen} />
+              <StatBar label={t.detail.total} value={stats.total_attr} max={600} />
+              <StatBar label={t.detail.hp} value={stats.hp} />
+              <StatBar label={t.detail.break} value={stats.break} />
+              <StatBar label={t.detail.attack} value={stats.attack} />
+              <StatBar label={t.detail.magicDef} value={stats.magic_def} />
+              <StatBar label={t.detail.physDef} value={stats.phys_def} />
+              <StatBar label={t.detail.energyRegen} value={stats.energy_regen} />
               <div className="pt-1">
                 <ConfidenceChip value={stats.confidence} />
               </div>
             </div>
           ) : (
-            <p className="mt-4 text-sm leading-7 text-[var(--ink-soft)]">
-              이 행의 종족치는 <span className="font-mono">null</span>입니다. 공식 인덱스에서 확인되기 전에는 전투
-              숫자를 채우지 않습니다.
-            </p>
+            <p className="mt-4 text-sm leading-7 text-[var(--ink-soft)]">{t.detail.nullNote}</p>
           )}
         </section>
       </div>
 
-      <div className="mt-8">
+      {relatedRegions.length > 0 ? (
+        <section className="mt-10">
+          <SectionHeading title={t.detail.relatedHabitats} />
+          <div className="mt-4 flex flex-wrap gap-2">
+            {relatedRegions.map((region) => (
+              <Link key={region.id} href={`/world#${region.id}`} className="chip chip-community">
+                {regionDisplayName(region, locale)}
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {kin.length > 0 ? (
+        <section className="mt-10">
+          <SectionHeading title={t.detail.relatedForms} />
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {kin.map((other) => (
+              <li key={other.id}>
+                <Link href={`/creatures/${other.slug}`} className="wiki-card card-hover flex items-center gap-3 p-3">
+                  {elementImage(other.element) ? (
+                    <Image
+                      src={elementImage(other.element)!}
+                      alt=""
+                      width={44}
+                      height={44}
+                      className="h-11 w-11 rounded-lg object-cover"
+                    />
+                  ) : null}
+                  <NamePair ko={other.name_ko} en={other.name_en} size="sm" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      <div className="mt-8 flex flex-wrap items-center gap-3">
         <LinkButton href="/creatures" variant="ghost">
-          ← 도감으로 돌아가기
+          {t.common.backToDex}
         </LinkButton>
+        <EditLink file="data/research/creatures.json" />
       </div>
     </div>
   );
