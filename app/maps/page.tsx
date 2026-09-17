@@ -74,20 +74,7 @@ export default async function MapsPage() {
       <section className="mb-10 wiki-card p-5 text-xs leading-6 text-[var(--ink-soft)]">
         <p className="font-display text-sm text-[var(--ink)]">{t.maps.licensesTitle}</p>
         <ul className="mt-2 space-y-1">
-          <li>
-            지도 데이터 ·{" "}
-            <a className="link-moss" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">
-              © OpenStreetMap contributors
-            </a>{" "}
-            (ODbL)
-          </li>
-          <li>
-            지형 타일 ·{" "}
-            <a className="link-moss" href="https://opentopomap.org" target="_blank" rel="noopener noreferrer">
-              © OpenTopoMap
-            </a>{" "}
-            (CC-BY-SA)
-          </li>
+          <li>맵 배경(에이델/Idyll) · 이 프로젝트가 만든 오리지널 팬 제작 일러스트(비공식). 공식 애니모 맵이 아닙니다.</li>
           <li>
             지도 엔진 ·{" "}
             <a className="link-moss" href="https://leafletjs.com" target="_blank" rel="noopener noreferrer">
@@ -95,7 +82,9 @@ export default async function MapsPage() {
             </a>{" "}
             (BSD-2-Clause)
           </li>
-          <li>일러스트 · 팬 제작(비공식), 분위기 표현용</li>
+          <li>
+            좌표는 공식이 아니며, 오픈 라이선스 애니모 맵이 없어 오리지널 맵을 사용합니다. 마커는 이 브라우저에만 저장됩니다.
+          </li>
         </ul>
       </section>
 

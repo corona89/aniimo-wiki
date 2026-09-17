@@ -4,15 +4,12 @@ This fan wiki is unofficial and not affiliated with Pawprint Studio or FunPlus.
 The interactive map uses open map data and an open-source map library, listed below
 with the attribution each license requires.
 
-## Map base data & tiles
+## Map base image
 
-- **OpenStreetMap** — map data © OpenStreetMap contributors, licensed under the
-  Open Database License (ODbL). https://www.openstreetmap.org/copyright
-- **OpenTopoMap** — terrain tile style © OpenTopoMap, licensed CC-BY-SA 3.0;
-  underlying data © OpenStreetMap contributors + SRTM. https://opentopomap.org
-
-Tiles are requested client-side from the providers' servers and are not redistributed
-by this project. Please respect each provider's tile usage policy.
+The interactive map uses an **original fan-made illustration** of the Idyll (에이델)
+continent created for this project (`public/art/idyll-map.jpg`). It is not the official
+Aniimo map and its coordinates are not official. No open-licensed Aniimo world map exists;
+community interactive maps use the publisher's copyrighted assets and are not reused here.
 
 ## Libraries
 

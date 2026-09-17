@@ -158,7 +158,7 @@ const ko = {
     poiNote: "region_id만 있고 lat/lng/x/y는 없습니다. 고래첨벙 해안과 갈매기 만은 EN 맵 이름을 붙이지 않습니다.",
     plannerTitle: "나만의 지도 (개인 마커)",
     plannerNote:
-      "베이스 지도는 오픈 데이터(OpenStreetMap · OpenTopoMap)입니다. 애니모 공식/오픈 게임월드 맵이 없어 실제 지도 엔진을 대신 사용합니다. 찍은 마커는 서버가 아니라 이 브라우저의 로컬 DB(IndexedDB)에만 저장됩니다.",
+      "에이델 대륙 맵은 이 프로젝트가 만든 오리지널 팬 일러스트입니다(공식 애니모 맵 아님, 좌표도 비공식). 오픈 라이선스의 애니모 맵이 없어 직접 제작한 맵을 씁니다. 찍은 마커는 서버가 아니라 이 브라우저의 로컬 DB(IndexedDB)에만 저장됩니다.",
     baseOsm: "OpenStreetMap",
     baseTopo: "지형 (OpenTopoMap)",
     licensesTitle: "라이선스 · 출처",
@@ -448,7 +448,7 @@ const en: typeof ko = {
     poiNote: "Only region_id, no lat/lng/x/y. Whale Splash Coast and Seagull Bay get no EN map name.",
     plannerTitle: "My map (personal markers)",
     plannerNote:
-      "The base map uses open data (OpenStreetMap · OpenTopoMap). There is no official/open Aniimo world map, so a real map engine is used as a stand-in. Markers you place are stored only in this browser's local database (IndexedDB), never on a server.",
+      "The Idyll map is an original fan-made illustration created for this project (not the official Aniimo map; coordinates are unofficial). There is no open-licensed Aniimo map, so we use our own. Markers you place are stored only in this browser's local database (IndexedDB), never on a server.",
     baseOsm: "OpenStreetMap",
     baseTopo: "Terrain (OpenTopoMap)",
     licensesTitle: "Licenses · attribution",
