@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import type * as LType from "leaflet";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useI18n } from "@/components/i18n/LocaleProvider";
+import { regionDisplayName, regions } from "@/lib/research";
 import {
   type MapMarker,
   bulkPutMarkers,
@@ -36,6 +37,20 @@ export const MARKER_TYPES = [
   "ecological_observation",
   "branch",
 ] as const;
+
+// Approximate landmark placements on OUR fan-made Idyll art (lat = y from bottom,
+// lng = x). These are decorative navigation aids, NOT official coordinates; the
+// coordinate data files stay empty per the wiki's no-invent-coordinates rule.
+const REGION_PINS: { id: string; lat: number; lng: number }[] = [
+  { id: "blitzwood", lat: 576, lng: 230 },
+  { id: "sea-of-flowers", lat: 300, lng: 345 },
+  { id: "forest-of-falling-stars", lat: 235, lng: 620 },
+  { id: "russet-highlands", lat: 375, lng: 950 },
+  { id: "mistwoods", lat: 450, lng: 585 },
+  { id: "nimbus-fields", lat: 565, lng: 560 },
+  { id: "tideblossom-coast", lat: 175, lng: 1055 },
+  { id: "astra", lat: 610, lng: 1030 },
+];
 
 const CATEGORIES: { id: "spawn" | "collect" | "combat" | "travel" | "world"; types: string[] }[] = [
   { id: "spawn", types: ["spawn_aniimo", "spawn_weather", "spawn_time"] },
@@ -84,7 +99,7 @@ function escapeHtml(s: string): string {
 }
 
 export function MapPlanner() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const typeLabels = t.maps.markerTypeLabels as Record<string, string>;
   const catLabels = t.maps.categories as Record<string, string>;
 
@@ -93,6 +108,8 @@ export function MapPlanner() {
   const mapRef = useRef<LType.Map | null>(null);
   const LRef = useRef<typeof LType | null>(null);
   const layerRef = useRef<LType.LayerGroup | null>(null);
+  const regionLayerRef = useRef<LType.LayerGroup | null>(null);
+  const [showRegions, setShowRegions] = useState(true);
 
   const [ready, setReady] = useState(false);
   const [markers, setMarkers] = useState<MapMarker[]>([]);
@@ -131,6 +148,7 @@ export function MapPlanner() {
       L.imageOverlay(IMG, bounds).addTo(map);
       map.fitBounds(bounds);
       map.setMaxBounds(L.latLngBounds([-120, -240], [IMG_H + 120, IMG_W + 240]));
+      regionLayerRef.current = L.layerGroup().addTo(map);
       layerRef.current = L.layerGroup().addTo(map);
 
       try {
@@ -185,6 +203,29 @@ export function MapPlanner() {
       });
     }
   }, [markers, visible, hideFound, selectedId, ready, typeLabels, t.maps.found]);
+
+  // Render region labels (decorative navigation on the fan map).
+  useEffect(() => {
+    const L = LRef.current;
+    const layer = regionLayerRef.current;
+    if (!ready || !L || !layer) return;
+    layer.clearLayers();
+    if (!showRegions) return;
+    for (const pin of REGION_PINS) {
+      const region = regions.find((r) => r.id === pin.id);
+      if (!region) continue;
+      const name = regionDisplayName(region, locale);
+      const icon = L.divIcon({
+        className: "",
+        html: `<span style="white-space:nowrap;padding:2px 8px;border-radius:999px;background:rgba(20,35,27,.62);color:#fff;font-size:11px;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.5)">${escapeHtml(name)}</span>`,
+        iconSize: [10, 10],
+        iconAnchor: [0, 0],
+      });
+      L.marker([pin.lat, pin.lng], { icon, interactive: true, keyboard: false })
+        .addTo(layer)
+        .on("click", () => mapRef.current?.setView([pin.lat, pin.lng], 0.5));
+    }
+  }, [showRegions, ready, locale]);
 
   const counts = useMemo(() => {
     const byType: Record<string, { total: number; found: number }> = {};
@@ -347,6 +388,31 @@ export function MapPlanner() {
         <label className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-sm">
           <input type="checkbox" checked={hideFound} onChange={(e) => setHideFound(e.target.checked)} />
           {t.maps.hideFound}
+        </label>
+        <select
+          className="rounded-full border border-[var(--line)] bg-[var(--paper-2)] px-3 py-1.5 text-sm"
+          defaultValue=""
+          onChange={(e) => {
+            const pin = REGION_PINS.find((r) => r.id === e.target.value);
+            if (pin) mapRef.current?.setView([pin.lat, pin.lng], 0.5);
+            e.target.value = "";
+          }}
+        >
+          <option value="" disabled>
+            {t.maps.jumpToRegion}
+          </option>
+          {REGION_PINS.map((pin) => {
+            const region = regions.find((r) => r.id === pin.id);
+            return (
+              <option key={pin.id} value={pin.id}>
+                {region ? regionDisplayName(region, locale) : pin.id}
+              </option>
+            );
+          })}
+        </select>
+        <label className="flex items-center gap-2 rounded-full border border-[var(--line)] px-3 py-1.5 text-sm">
+          <input type="checkbox" checked={showRegions} onChange={(e) => setShowRegions(e.target.checked)} />
+          {t.maps.showRegionLabels}
         </label>
         <button type="button" onClick={exportJson} className="btn btn-ghost">
           {t.maps.exportJson}

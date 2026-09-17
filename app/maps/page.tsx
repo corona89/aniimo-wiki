@@ -75,6 +75,7 @@ export default async function MapsPage() {
         <p className="font-display text-sm text-[var(--ink)]">{t.maps.licensesTitle}</p>
         <ul className="mt-2 space-y-1">
           <li>맵 배경(에이델/Idyll) · 이 프로젝트가 만든 오리지널 팬 제작 일러스트(비공식). 공식 애니모 맵이 아닙니다.</li>
+          <li>{t.maps.regionApprox}</li>
           <li>
             지도 엔진 ·{" "}
             <a className="link-moss" href="https://leafletjs.com" target="_blank" rel="noopener noreferrer">
