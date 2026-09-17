@@ -13,9 +13,11 @@ import {
   putMarker,
 } from "@/lib/markersDb";
 
-const IMG = "/art/world-vista.jpg";
-const IMG_W = 1280;
-const IMG_H = 720;
+const OSM_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+const OSM_ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const TOPO_URL = "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png";
+const TOPO_ATTR =
+  'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, SRTM | Style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)';
 
 export const MARKER_TYPES = [
   "spawn_aniimo",
@@ -102,19 +104,16 @@ export function MapPlanner() {
       const L = (await import("leaflet")).default;
       if (disposed || !containerRef.current || mapRef.current) return;
       LRef.current = L;
-      const bounds: LType.LatLngBoundsExpression = [
-        [0, 0],
-        [IMG_H, IMG_W],
-      ];
       const map = L.map(containerRef.current, {
-        crs: L.CRS.Simple,
-        minZoom: -2,
-        maxZoom: 2,
-        attributionControl: false,
+        center: [20, 0],
+        zoom: 2,
+        minZoom: 2,
+        worldCopyJump: true,
       });
-      L.imageOverlay(IMG, bounds).addTo(map);
-      map.fitBounds(bounds);
-      map.setMaxBounds(bounds);
+      const osm = L.tileLayer(OSM_URL, { maxZoom: 19, attribution: OSM_ATTR }).addTo(map);
+      const topo = L.tileLayer(TOPO_URL, { maxZoom: 17, attribution: TOPO_ATTR });
+      L.control.layers({ [t.maps.baseOsm]: osm, [t.maps.baseTopo]: topo }, undefined, { position: "topright" }).addTo(map);
+      L.control.scale({ imperial: false }).addTo(map);
       layerRef.current = L.layerGroup().addTo(map);
       map.on("click", (e: LType.LeafletMouseEvent) => {
         if (!addModeRef.current) return;
@@ -129,6 +128,8 @@ export function MapPlanner() {
       mapRef.current?.remove();
       mapRef.current = null;
     };
+    // Map is initialized once on mount; locale labels are read at init time.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Render markers whenever data / filters change.

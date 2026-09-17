@@ -65,10 +65,38 @@ export default async function MapsPage() {
         <AdminEditLink file="data/research/maps.md" />
       </div>
 
-      <section className="mb-10">
+      <section className="mb-6">
         <h2 className="font-display text-2xl">{t.maps.plannerTitle}</h2>
         <p className="mt-2 mb-4 max-w-3xl text-sm leading-7 text-[var(--ink-soft)]">{t.maps.plannerNote}</p>
         <MapPlanner />
+      </section>
+
+      <section className="mb-10 wiki-card p-5 text-xs leading-6 text-[var(--ink-soft)]">
+        <p className="font-display text-sm text-[var(--ink)]">{t.maps.licensesTitle}</p>
+        <ul className="mt-2 space-y-1">
+          <li>
+            지도 데이터 ·{" "}
+            <a className="link-moss" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">
+              © OpenStreetMap contributors
+            </a>{" "}
+            (ODbL)
+          </li>
+          <li>
+            지형 타일 ·{" "}
+            <a className="link-moss" href="https://opentopomap.org" target="_blank" rel="noopener noreferrer">
+              © OpenTopoMap
+            </a>{" "}
+            (CC-BY-SA)
+          </li>
+          <li>
+            지도 엔진 ·{" "}
+            <a className="link-moss" href="https://leafletjs.com" target="_blank" rel="noopener noreferrer">
+              Leaflet
+            </a>{" "}
+            (BSD-2-Clause)
+          </li>
+          <li>일러스트 · 팬 제작(비공식), 분위기 표현용</li>
+        </ul>
       </section>
 
       <section className="mt-8 wiki-card p-6">

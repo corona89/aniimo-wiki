@@ -158,7 +158,10 @@ const ko = {
     poiNote: "region_id만 있고 lat/lng/x/y는 없습니다. 고래첨벙 해안과 갈매기 만은 EN 맵 이름을 붙이지 않습니다.",
     plannerTitle: "나만의 지도 (개인 마커)",
     plannerNote:
-      "이 지도는 개인 플래너입니다. 배경은 팬 제작 일러스트이고 좌표는 공식이 아닙니다. 찍은 마커는 서버가 아니라 이 브라우저의 로컬 DB(IndexedDB)에만 저장됩니다.",
+      "베이스 지도는 오픈 데이터(OpenStreetMap · OpenTopoMap)입니다. 애니모 공식/오픈 게임월드 맵이 없어 실제 지도 엔진을 대신 사용합니다. 찍은 마커는 서버가 아니라 이 브라우저의 로컬 DB(IndexedDB)에만 저장됩니다.",
+    baseOsm: "OpenStreetMap",
+    baseTopo: "지형 (OpenTopoMap)",
+    licensesTitle: "라이선스 · 출처",
     addMarker: "마커 추가",
     addMarkerOn: "지도를 클릭해 위치 지정",
     cancel: "취소",
@@ -435,7 +438,10 @@ const en: typeof ko = {
     poiNote: "Only region_id, no lat/lng/x/y. Whale Splash Coast and Seagull Bay get no EN map name.",
     plannerTitle: "My map (personal markers)",
     plannerNote:
-      "This is a personal planner. The backdrop is fan-made art and coordinates are not official. Markers you place are stored only in this browser's local database (IndexedDB), never on a server.",
+      "The base map uses open data (OpenStreetMap · OpenTopoMap). There is no official/open Aniimo world map, so a real map engine is used as a stand-in. Markers you place are stored only in this browser's local database (IndexedDB), never on a server.",
+    baseOsm: "OpenStreetMap",
+    baseTopo: "Terrain (OpenTopoMap)",
+    licensesTitle: "Licenses · attribution",
     addMarker: "Add marker",
     addMarkerOn: "Click the map to place it",
     cancel: "Cancel",
