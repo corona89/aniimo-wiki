@@ -9,6 +9,7 @@ export type MapMarker = {
   lat: number;
   lng: number;
   createdAt: number;
+  found?: boolean;
 };
 
 const DB_NAME = "aniimo-map";
