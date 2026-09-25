@@ -43,6 +43,9 @@ export type NodeType =
   | "TrainingAction"
   | "EggType"
   | "MarkerType"
+  | "Quest"
+  | "Event"
+  | "Reward"
   | "NamingPair"
   | "VersionNote"
   | "Source";
@@ -144,6 +147,19 @@ export const CATEGORY_TAXONOMY: Category[] = [
     ],
   },
   {
+    id: "quest",
+    label: { ko: "퀘스트 · 이벤트", en: "Quests & Events" },
+    description: { ko: "메인/월드 퀘스트, 한정 이벤트, 보상", en: "Main/world quests, limited-time events, rewards" },
+    sources: ["data/research/wiki-outline.md", "data/research/meta.json", "data/research/systems.md"],
+    nodeTypes: ["Quest", "Event", "Reward"],
+    children: [
+      { id: "quest.main", label: { ko: "메인 스토리", en: "Main story" }, description: { ko: "메인 스토리 퀘스트 라인(스포일러)", en: "Main story quest line (spoilers)" }, sources: ["data/research/wiki-outline.md"], nodeTypes: ["Quest"] },
+      { id: "quest.world", label: { ko: "월드 · 돌발 퀘스트", en: "World / side quests" }, description: { ko: "월드 활동·돌발 이벤트", en: "World activities, dynamic events" }, sources: ["data/research/wiki-outline.md"], nodeTypes: ["Quest"] },
+      { id: "quest.event", label: { ko: "한정 이벤트", en: "Limited-time events" }, description: { ko: "기간제 이벤트·시즌·콜라보(시작/종료일), 사전예약 등", en: "Time-limited events, seasons, collabs (start/end), pre-registration" }, sources: ["data/research/meta.json", "data/research/systems.md"], nodeTypes: ["Event"] },
+      { id: "quest.reward", label: { ko: "보상", en: "Rewards" }, description: { ko: "퀘스트·이벤트 보상(아이템/애니모/알)", en: "Quest/event rewards (items/Aniimo/eggs)" }, sources: ["data/research/meta.json"], nodeTypes: ["Reward"] },
+    ],
+  },
+  {
     id: "map",
     label: { ko: "지도", en: "Maps" },
     description: { ko: "마커 유형·지역 참조(개인 좌표는 그래프에 넣지 않음)", en: "Marker types, region refs (personal coords stay out of the graph)" },
@@ -186,6 +202,12 @@ export const EDGE_TYPES: EdgeType[] = [
   { type: "AFFECTS", from: "System", to: "Creature", label: { ko: "영향", en: "affects" } },
   { type: "CONSUMES", from: "TrainingAction", to: "Item", label: { ko: "소비", en: "consumes" } },
   { type: "STRONG_AGAINST", from: "Element", to: "Element", label: { ko: "상성 우위(미확인)", en: "strong against (unknown)" } },
+  { type: "REWARDS", from: "Quest", to: "Reward", label: { ko: "보상", en: "rewards" } },
+  { type: "EVENT_REWARDS", from: "Event", to: "Reward", label: { ko: "이벤트 보상", en: "event rewards" } },
+  { type: "TAKES_PLACE_IN", from: "Quest", to: "Region", label: { ko: "진행 지역", en: "takes place in" } },
+  { type: "FEATURES", from: "Event", to: "Creature", label: { ko: "등장 애니모", en: "features" } },
+  { type: "GRANTS_ITEM", from: "Reward", to: "Item", label: { ko: "지급 아이템", en: "grants item" } },
+  { type: "GRANTS_CREATURE", from: "Reward", to: "Creature", label: { ko: "지급 애니모", en: "grants creature" } },
   // Provenance edges — attachable from ANY node.
   { type: "CITES", from: "Creature", to: "Source", label: { ko: "출처", en: "cites" } },
   { type: "HAS_NAMING", from: "Creature", to: "NamingPair", label: { ko: "표기", en: "has naming" } },
