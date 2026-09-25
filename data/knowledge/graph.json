@@ -1,0 +1,3988 @@
+{
+  "meta": {
+    "generatedFrom": "data/research/*",
+    "packDate": "2026-09-16",
+    "model": "labeled-property-graph",
+    "ontology": "lib/knowledge/ontology.ts"
+  },
+  "nodes": [
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:0",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo official homepage (KO)",
+        "en": "Aniimo official homepage (KO)"
+      },
+      "props": {
+        "url": "https://www.aniimo.com/ko",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "Launch rewards, 연구 수첩, 애니팟, 수줍달 알, 천휘 선택"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:1",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Global Launch Dates (PC/console Sep 16, mobile Sep 23)",
+        "en": "Aniimo Global Launch Dates (PC/console Sep 16, mobile Sep 23)"
+      },
+      "props": {
+        "url": "https://www.aniimo.com/newslist/detail/100051",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "confirmed release dates"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:2",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo PC & Console Pre-Download / server times",
+        "en": "Aniimo PC & Console Pre-Download / server times"
+      },
+      "props": {
+        "url": "https://www.aniimo.com/newslist/detail/100089",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "UTC+8 launch; PS/Xbox links; account linking FAQ"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:3",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "공식 확률 안내 (포획·천휘·스파클 스타일)",
+        "en": "공식 확률 안내 (포획·천휘·스파클 스타일)"
+      },
+      "props": {
+        "url": "https://www.aniimo.com/ko/formula-multipliers",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "Aniipod coeffs, Prismana nurture odds, Sparkling style tables"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:4",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Official Aniimo Index — 수줍달",
+        "en": "Official Aniimo Index — 수줍달"
+      },
+      "props": {
+        "url": "https://wiki.aniimo.com/ko/item/10003298",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "NO.050 Water; stats; 고래첨벙 해안; 밤 형태"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:5",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Official Aniimo Index — 수줍달 (alt item id)",
+        "en": "Official Aniimo Index — 수줍달 (alt item id)"
+      },
+      "props": {
+        "url": "https://wiki.aniimo.com/ko/item/10003302",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "Night-form flavor text variant"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:6",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Official Aniimo Index — 싹크랩",
+        "en": "Official Aniimo Index — 싹크랩"
+      },
+      "props": {
+        "url": "https://wiki.aniimo.com/ko/item/10003310",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "NO.024 Earth; multi forms; 고래첨벙 해안"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:7",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Official Aniimo Index — 싹크랩 beach form page",
+        "en": "Official Aniimo Index — 싹크랩 beach form page"
+      },
+      "props": {
+        "url": "https://wiki.aniimo.com/ko/item/10003314",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "갈매기 만 habitat"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:8",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Bubbeep Official Index (EN) habitat Crescent Bay",
+        "en": "Bubbeep Official Index (EN) habitat Crescent Bay"
+      },
+      "props": {
+        "url": "https://wiki.aniimo.com/item/10002748",
+        "type": "official",
+        "accessed": "2026-09-16",
+        "notes": "Crescent Bay habitat confirmation"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:9",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "FunPlus — Aniimo game page",
+        "en": "FunPlus — Aniimo game page"
+      },
+      "props": {
+        "url": "https://funplus.com/games/aniimo/",
+        "type": "official_publisher",
+        "accessed": "2026-09-16",
+        "notes": "Pawprint / FunPlus; platforms"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:10",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "FunPlus — Gamescom Sep 16 confirm",
+        "en": "FunPlus — Gamescom Sep 16 confirm"
+      },
+      "props": {
+        "url": "https://funplus.com/aniimo-confirms-september-16-console-pc-release-date-at-gc/",
+        "type": "official_publisher",
+        "accessed": "2026-09-16",
+        "notes": "PS5 Xbox Steam Epic; mobile Sep 23"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:11",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "FunPlus — Global CBT / Island of Peace",
+        "en": "FunPlus — Global CBT / Island of Peace"
+      },
+      "props": {
+        "url": "https://funplus.com/aniimo-announces-global-close-beta-test-and-launch-window/",
+        "type": "official_publisher",
+        "accessed": "2026-09-16",
+        "notes": "Island of Peace water region; Twining; trading"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:12",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Steam store — Aniimo app 4126040",
+        "en": "Steam store — Aniimo app 4126040"
+      },
+      "props": {
+        "url": "https://store.steampowered.com/app/4126040/Aniimo/",
+        "type": "store",
+        "accessed": "2026-09-16",
+        "notes": "F2P; cross-platform MP; RV/Homeland; genres; KO audio"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:13",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "PlayStation — Aniimo",
+        "en": "PlayStation — Aniimo"
+      },
+      "props": {
+        "url": "https://www.playstation.com/en-us/games/aniimo/",
+        "type": "store",
+        "accessed": "2026-09-16",
+        "notes": "Idyll; Twine; 200+ marketing; publisher PAWPRINT INTERACTIVE…; Egg Heist"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:14",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "PlayStation Store concept",
+        "en": "PlayStation Store concept"
+      },
+      "props": {
+        "url": "https://store.playstation.com/concept/10018491",
+        "type": "store",
+        "accessed": "2026-09-16",
+        "notes": "Pre-order concept ID from official news"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:15",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Xbox — Buy Aniimo",
+        "en": "Xbox — Buy Aniimo"
+      },
+      "props": {
+        "url": "https://www.xbox.com/games/store/aniimo/9pk8phlcqdf6",
+        "type": "store",
+        "accessed": "2026-09-16",
+        "notes": "E10+; Play Anywhere; co-op 2-4; RV camping"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:16",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Xbox KO store copy",
+        "en": "Xbox KO store copy"
+      },
+      "props": {
+        "url": "https://www.xbox.com/ko-KR/games/store/aniimo/9PK8PHLCQDF6",
+        "type": "store",
+        "accessed": "2026-09-16",
+        "notes": "에이델; 트와인; 수수타/화염랑/싹크랩 flavor"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:17",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "RPGamer — Aniimo Releasing in September",
+        "en": "RPGamer — Aniimo Releasing in September"
+      },
+      "props": {
+        "url": "https://rpgamer.com/2026/08/aniimo-releasing-in-september/",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "Idyll; Twining; Homeland; Diamond Egg Heist"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:18",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "IGN KR — gameplay trailer",
+        "en": "IGN KR — gameplay trailer"
+      },
+      "props": {
+        "url": "https://kr.ign.com/aniimo/15065/opeunweoldeu-monseuteo-pohoeg-rpg-aenimo-geimpeulrei-teureilreo-gonggae",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "에이델; 트와인; 애니팟"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:19",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "ThisIsGame — Twine / Aniipod preview",
+        "en": "ThisIsGame — Twine / Aniipod preview"
+      },
+      "props": {
+        "url": "https://www.thisisgame.com/articles/429757",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "트와인; 챔피언/스파클 애니팟; 캠핑카"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:20",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Inven — open world / Astra / camping",
+        "en": "Inven — open world / Astra / camping"
+      },
+      "props": {
+        "url": "https://www.inven.co.kr/webzine/news/?news=320527",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "에이델·아스트라·폴라리스; 안개숲; 캠핑카 하우징"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:21",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "GameMeca — 천휘 collection thresholds",
+        "en": "GameMeca — 천휘 collection thresholds"
+      },
+      "props": {
+        "url": "https://www.gamemeca.com/view.php?gid=1780473",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "40%/70% 지맥·천휘; 스파클 애니팟"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:22",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "LDPlayer KR beginner guide",
+        "en": "LDPlayer KR beginner guide"
+      },
+      "props": {
+        "url": "https://kr.ldplayer.net/blog/aniimo-beginner-guide.html",
+        "type": "guide",
+        "accessed": "2026-09-16",
+        "notes": "에이델; 생태 관찰점; 공명 훈련 순서"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:23",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "namu.wiki 애니모",
+        "en": "namu.wiki 애니모"
+      },
+      "props": {
+        "url": "https://namu.moe/w/%EC%95%A0%EB%8B%88%EB%AA%A8",
+        "type": "community_wiki",
+        "accessed": "2026-09-16",
+        "notes": "Ariel Network / Kingsglory; GRAC field empty; platforms"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:24",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Fextralife — Regions and Biomes",
+        "en": "Fextralife — Regions and Biomes"
+      },
+      "props": {
+        "url": "https://aniimo.wiki.fextralife.com/Regions_and_Biomes",
+        "type": "community_wiki",
+        "accessed": "2026-09-16",
+        "notes": "15 regions gallery list; mirror fextralife.com/wiki/aniimo/Regions_and_Biomes"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:25",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Fextralife — Interactive Map",
+        "en": "Fextralife — Interactive Map"
+      },
+      "props": {
+        "url": "https://aniimo.wiki.fextralife.com/Interactive_Map",
+        "type": "community_wiki",
+        "accessed": "2026-09-16",
+        "notes": "Markers not live yet; sanctums/puzzles planned; fetch 500 intermittent"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:26",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Tools — home",
+        "en": "Aniimo Tools — home"
+      },
+      "props": {
+        "url": "https://aniimotools.dev/",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Catalog counters; launch info; elements"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:27",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Tools — regions",
+        "en": "Aniimo Tools — regions"
+      },
+      "props": {
+        "url": "https://aniimotools.dev/regions/",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Partial region blurbs + level bands"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:28",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Tools — Island of Peace",
+        "en": "Aniimo Tools — Island of Peace"
+      },
+      "props": {
+        "url": "https://aniimotools.dev/regions/island-of-peace/",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Beta water region; launch permanence unconfirmed"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:29",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Tools — interactive map",
+        "en": "Aniimo Tools — interactive map"
+      },
+      "props": {
+        "url": "https://aniimotools.dev/map/",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "In-game coords claim; spawn/chest/boss/teleporter filters"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:30",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Tools — weather spawns",
+        "en": "Aniimo Tools — weather spawns"
+      },
+      "props": {
+        "url": "https://aniimotools.dev/systems/weather/",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Weather forms; Crescent Bay level snippets; Prismana Flow"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:31",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Aniimo Tools — Sparkling guide",
+        "en": "Aniimo Tools — Sparkling guide"
+      },
+      "props": {
+        "url": "https://aniimotools.dev/systems/sparkling/",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Radar 80%; breeding 100%; toolkit items; rate 1/20000 community datamine"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:32",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "AniimoGuide — Aniidex",
+        "en": "AniimoGuide — Aniidex"
+      },
+      "props": {
+        "url": "https://aniimoguide.com/aniidex",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "95 numbered EN names; habitats; form counts; claims wiki.aniimo.com sourcing"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:33",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "AniimoGuide — beginner guide",
+        "en": "AniimoGuide — beginner guide"
+      },
+      "props": {
+        "url": "https://aniimoguide.com/news/aniimo-beginner-guide-what-to-expect",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Twining; Potential; Resonance; Hatchinator; Lumin/Gamma/Nova"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:34",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "AniimoGuide — forms guide",
+        "en": "AniimoGuide — forms guide"
+      },
+      "props": {
+        "url": "https://aniimoguide.com/news/aniimo-forms-complete-guide",
+        "type": "community",
+        "accessed": "2026-09-16",
+        "notes": "Regional/Prismana/Sparkling/Alpha/Omega taxonomy"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:35",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "GameRant — Aniimo DB",
+        "en": "GameRant — Aniimo DB"
+      },
+      "props": {
+        "url": "https://gamerant.com/db/video-game/aniimo/",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "ESRB E10+; cross-play/cross-save flags (verify)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:36",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Pixelkin — Sep release / E10+",
+        "en": "Pixelkin — Sep release / E10+"
+      },
+      "props": {
+        "url": "https://pixelkin.org/2026/08/28/open-world-creature-collector-aniimo-confirms-september-release-date/",
+        "type": "news",
+        "accessed": "2026-09-16",
+        "notes": "ESRB E10+"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "source:37",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "Steam Community hub appid",
+        "en": "Steam Community hub appid"
+      },
+      "props": {
+        "url": "https://steamcommunity.com/app/4126040",
+        "type": "store",
+        "accessed": "2026-09-16",
+        "notes": "Confirms Steam appid 4126040"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "game:aniimo",
+      "type": "Game",
+      "category": "game.identity",
+      "name": {
+        "ko": "애니모",
+        "en": "Aniimo"
+      },
+      "props": {
+        "developer": "Pawprint Studio",
+        "pc_console": "2026-09-16",
+        "mobile": "2026-09-23",
+        "genres": [
+          "open-world",
+          "creature-catching",
+          "action RPG",
+          "collection",
+          "free-to-play",
+          "multiplayer",
+          "co-op",
+          "PvP",
+          "housing / camping"
+        ]
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "continent:idyll",
+      "type": "Continent",
+      "category": "world.continent",
+      "name": {
+        "ko": "에이델",
+        "en": "Idyll"
+      },
+      "props": {
+        "notes": "EN Idyll = KO 에이델 localization pair."
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Fire",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "불",
+        "en": "Fire"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Water",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "물",
+        "en": "Water"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Grass",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "풀",
+        "en": "Grass"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Lightning",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "번개",
+        "en": "Lightning"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Earth",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "땅",
+        "en": "Earth"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Wind",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "바람",
+        "en": "Wind"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Dark",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "암흑",
+        "en": "Dark"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Ice",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "얼음",
+        "en": "Ice"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "element:Light",
+      "type": "Element",
+      "category": "creature.element",
+      "name": {
+        "ko": "빛",
+        "en": "Light"
+      },
+      "props": {}
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:argent-strait",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Argent Strait"
+      },
+      "props": {
+        "biome_notes": "Strait / coastal waterway (name implication only).",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:beast-fang-ridge",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Beast Fang Ridge"
+      },
+      "props": {
+        "biome_notes": "Ridge / mountain terrain (name implication).",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:berylline-causeway",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Berylline Causeway"
+      },
+      "props": {
+        "biome_notes": "Causeway; related habitat Berylline Vale appears separately on Aniidex (1 entry) — relationship unknown.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:27",
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:blitzwood",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Blitzwood"
+      },
+      "props": {
+        "biome_notes": "Thunder-struck wood; gray scorched soil; Bolties / electric sparks (aniimotools blurb).",
+        "weather_notes": "Lightning-associated; thunderstorm weather spawns documented on community weather page.",
+        "level_band": "29+",
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:brightbough-plateau",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Brightbough Plateau"
+      },
+      "props": {
+        "biome_notes": "Plateau / wooded high ground (name implication).",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:driftwise-meadow",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Driftwise Meadow"
+      },
+      "props": {
+        "biome_notes": "Meadow.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:27",
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:echoback-landing",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Echoback Landing"
+      },
+      "props": {
+        "biome_notes": "Coastal/landing; lore of enormous stranded Aniimo and Echoback singing (aniimotools).",
+        "weather_notes": null,
+        "level_band": "38-44",
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:27",
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:forest-of-falling-stars",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Forest of Falling Stars"
+      },
+      "props": {
+        "biome_notes": "Dense purple forest; starine trees; Celestis glide like shooting stars (aniimotools).",
+        "weather_notes": null,
+        "level_band": "20-25",
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:27",
+        "source:20",
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:mistwoods",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": "안개숲",
+        "en": "Mistwoods"
+      },
+      "props": {
+        "biome_notes": "Mist, withered twigs, swamp with poisonous miasma; glimmer fruits as lamps (aniimotools). Inven mentions 안개숲 swamp vs riverside spawn differences.",
+        "weather_notes": null,
+        "level_band": "37-41",
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:27",
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:nimbus-fields",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Nimbus Fields"
+      },
+      "props": {
+        "biome_notes": "Thick grassland; soft clouds; Nimbis bounce (aniimotools).",
+        "weather_notes": "Rain-associated Nimbi lore quoted on weather page.",
+        "level_band": "17-21",
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:rosetower-wood",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Rosetower Wood"
+      },
+      "props": {
+        "biome_notes": "Woodland; Towerwood form morph name appears in form lists.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:russet-highlands",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Russet Highlands"
+      },
+      "props": {
+        "biome_notes": "Highlands; Aniidex lists high habitat count (22).",
+        "weather_notes": "Highland Form regional morphs common in catalog.",
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:27",
+        "source:24"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:sea-of-flowers",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Sea of Flowers"
+      },
+      "props": {
+        "biome_notes": "Endless flower fields; perfume village among purple flowers (aniimotools).",
+        "weather_notes": "Sea of Flowers Form regional morphs.",
+        "level_band": "23-29",
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:tideblossom-coast",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Tideblossom Coast"
+      },
+      "props": {
+        "biome_notes": "Coastal.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:24",
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:zephyrus-landbridge",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Zephyrus Landbridge"
+      },
+      "props": {
+        "biome_notes": "Landbridge (wind-named).",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "listed_as_region"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:29",
+        "source:30"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:breezy-plains",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Breezy Plains"
+      },
+      "props": {
+        "biome_notes": "Described by aniimotools as starting region / interactive map focus. NOT in Fextralife 15-region gallery — possible umbrella, rename, or habitat-level name.",
+        "weather_notes": "Weather spawns documented for early levels (Lv 5–15 on weather page snippets).",
+        "level_band": "5-15 (community weather page snippets; verify)",
+        "status": "map_focus_name_ambiguous_vs_fextralife15"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32",
+        "source:30",
+        "source:8"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:crescent-bay",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Crescent Bay"
+      },
+      "props": {
+        "biome_notes": "Bay / coastal habitat; listed on Aniidex habitats (11) and weather spawn sections (Lv 51–55 snippets).",
+        "weather_notes": "Has dedicated weather-spawn entries on aniimotools weather page.",
+        "level_band": "51-55 (community; verify)",
+        "status": "habitat_or_region_ambiguous"
+      }
+    },
+    {
+      "confidence": "marketing",
+      "sources": [
+        "source:11",
+        "source:28",
+        "source:29"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:island-of-peace",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Island of Peace"
+      },
+      "props": {
+        "biome_notes": "Water-themed region introduced in Global CBT / CB builds.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "beta_region_launch_permanence_unconfirmed"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [
+        "source:5",
+        "source:4"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:whale-splash-coast",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": "고래첨벙 해안",
+        "en": null
+      },
+      "props": {
+        "biome_notes": "Official KO Aniimo Index habitat for 수줍달 (Susuta) and related; EN map name mapping unknown — do not equate without source.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "official_ko_habitat_en_mapping_unknown"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [
+        "source:7"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:seagull-bay",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": "갈매기 만",
+        "en": null
+      },
+      "props": {
+        "biome_notes": "Official KO Index appearance region for 싹크랩 beach-related entry; EN mapping unknown.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "official_ko_habitat_en_mapping_unknown"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:berylline-vale",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": null,
+        "en": "Berylline Vale"
+      },
+      "props": {
+        "biome_notes": "Appears as habitat with 1 Aniimo on Aniidex; may be sub-area of Berylline Causeway — unknown.",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "habitat_subarea_unknown"
+      }
+    },
+    {
+      "confidence": "marketing",
+      "sources": [
+        "source:13",
+        "source:20",
+        "source:33"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "region:astra",
+      "type": "Region",
+      "category": "world.region",
+      "name": {
+        "ko": "아스트라",
+        "en": "Astra"
+      },
+      "props": {
+        "biome_notes": "Sky-floating metropolis; hub for Pathfinders / competitive content (not a wild Idyll field region).",
+        "weather_notes": null,
+        "level_band": null,
+        "status": "hub_city_not_field_region"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:emberpup",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "탄멍멍",
+        "en": "Emberpup"
+      },
+      "props": {
+        "aniilog_no": "001",
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:flameruff",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "화르랑",
+        "en": "Flameruff"
+      },
+      "props": {
+        "aniilog_no": "002",
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:scorchhowl",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "이글랑",
+        "en": "Scorchhowl"
+      },
+      "props": {
+        "aniilog_no": "003",
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:inferlupa",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "헬울프",
+        "en": "Inferlupa"
+      },
+      "props": {
+        "aniilog_no": "004",
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:celestis",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "스타라미",
+        "en": "Celestis"
+      },
+      "props": {
+        "aniilog_no": "005",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:stellarys",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "스타저드",
+        "en": "Stellarys"
+      },
+      "props": {
+        "aniilog_no": "006",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:chirpi",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "호루매기",
+        "en": "Chirpi"
+      },
+      "props": {
+        "aniilog_no": "007",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:tromber",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "롬본이",
+        "en": "Tromber"
+      },
+      "props": {
+        "aniilog_no": "008",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Rain / sea lore (community weather quote)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:cornet",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "럼펫이",
+        "en": "Cornet"
+      },
+      "props": {
+        "aniilog_no": "009",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:tubster",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "튜바얌",
+        "en": "Tubster"
+      },
+      "props": {
+        "aniilog_no": "010",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:iris",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "플러터",
+        "en": "Iris"
+      },
+      "props": {
+        "aniilog_no": "011",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:irisal",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "왈츠페탈",
+        "en": "Irisal"
+      },
+      "props": {
+        "aniilog_no": "012",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:irisalis",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Irisalis"
+      },
+      "props": {
+        "aniilog_no": "013",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Community: Sparkling rate 0 in beta client data"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:skippy",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "연댕모리",
+        "en": "Skippy"
+      },
+      "props": {
+        "aniilog_no": "014",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:pranky",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "장꾸모리",
+        "en": "Pranky"
+      },
+      "props": {
+        "aniilog_no": "015",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:glacy",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "아이시우스",
+        "en": "Glacy"
+      },
+      "props": {
+        "aniilog_no": "016",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:leafy",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "연잎룡",
+        "en": "Leafy"
+      },
+      "props": {
+        "aniilog_no": "017",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:nimbi",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "뭉게양",
+        "en": "Nimbi"
+      },
+      "props": {
+        "aniilog_no": "018",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Nimbus Fields; rain lore"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:turbo",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "몽실양",
+        "en": "Turbo"
+      },
+      "props": {
+        "aniilog_no": "019",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:dreaple",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "쿨쿨양",
+        "en": "Dreaple"
+      },
+      "props": {
+        "aniilog_no": "020",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:hummin",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "삑삑초",
+        "en": "Hummin"
+      },
+      "props": {
+        "aniilog_no": "021",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:hexxin",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Hexxin"
+      },
+      "props": {
+        "aniilog_no": "022",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:tuckin",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "굴파미",
+        "en": "Tuckin"
+      },
+      "props": {
+        "aniilog_no": "023",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [
+        "source:6"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:budclaw",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "싹크랩",
+        "en": "Budclaw"
+      },
+      "props": {
+        "aniilog_no": "024",
+        "element": "Earth",
+        "role_ko": "격파",
+        "rarity": null,
+        "forms_known": [
+          "기본 형태",
+          "습지 형태",
+          "해변 형태",
+          "바다만 형태"
+        ],
+        "stats": {
+          "total_attr": 454,
+          "hp": 76,
+          "break": 84,
+          "attack": 64,
+          "magic_def": 65,
+          "phys_def": 93,
+          "energy_regen": 72,
+          "confidence": "confirmed",
+          "source": "https://wiki.aniimo.com/ko/item/10003310"
+        },
+        "notes": "Official KO index NO.024 땅 격파; forms: 기본/습지/해변/바다만; habitats 고래첨벙 해안 / 갈매기 만"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:shrubclaw",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "풀크랩",
+        "en": "Shrubclaw"
+      },
+      "props": {
+        "aniilog_no": "025",
+        "element": "Earth",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Budclaw line evolution (community numbering)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:geoclaw",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "스탈크랩",
+        "en": "Geoclaw"
+      },
+      "props": {
+        "aniilog_no": "026",
+        "element": "Earth",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Budclaw line evolution (community numbering)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:sparki",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "도깨불",
+        "en": "Sparki"
+      },
+      "props": {
+        "aniilog_no": "027",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:flamerion",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "일렁깨비",
+        "en": "Flamerion"
+      },
+      "props": {
+        "aniilog_no": "028",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:flutternym",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "반짝쵸",
+        "en": "Flutternym"
+      },
+      "props": {
+        "aniilog_no": "029",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:gracewing",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "판타쵸",
+        "en": "Gracewing"
+      },
+      "props": {
+        "aniilog_no": "030",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:somniwing",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Somniwing"
+      },
+      "props": {
+        "aniilog_no": "031",
+        "element": "Wind",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:eko",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "래빗배트",
+        "en": "Eko"
+      },
+      "props": {
+        "aniilog_no": "032",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:eklue",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "디텍배트",
+        "en": "Eklue"
+      },
+      "props": {
+        "aniilog_no": "033",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:budsquire",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "울먹팡",
+        "en": "Budsquire"
+      },
+      "props": {
+        "aniilog_no": "034",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:thornblade",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "콕콕바라",
+        "en": "Thornblade"
+      },
+      "props": {
+        "aniilog_no": "035",
+        "element": "Grass",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Rainstorm Form Grass+Lightning noted on weather page"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:melloblum",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "플로리안",
+        "en": "Melloblum"
+      },
+      "props": {
+        "aniilog_no": "036",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:pomegg",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "라라에그",
+        "en": "Pomegg"
+      },
+      "props": {
+        "aniilog_no": "037",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:dazmand",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "썬더자드",
+        "en": "Dazmand"
+      },
+      "props": {
+        "aniilog_no": "038",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:pomawk",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "붐테일자드",
+        "en": "Pomawk"
+      },
+      "props": {
+        "aniilog_no": "039",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:dewy",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "허니버드",
+        "en": "Dewy"
+      },
+      "props": {
+        "aniilog_no": "040",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fragrancier",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "플로라버드",
+        "en": "Fragrancier"
+      },
+      "props": {
+        "aniilog_no": "041",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:wisptis",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "싹뚜기",
+        "en": "Wisptis"
+      },
+      "props": {
+        "aniilog_no": "042",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:ignitis",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "서걱리퍼",
+        "en": "Ignitis"
+      },
+      "props": {
+        "aniilog_no": "043",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fulmintis",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "썬더스퀵",
+        "en": "Fulmintis"
+      },
+      "props": {
+        "aniilog_no": "044",
+        "element": "Lightning",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Prismana examples in forms guide"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:bonesky",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "서린댕",
+        "en": "Bonesky"
+      },
+      "props": {
+        "aniilog_no": "045",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fenrier",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "빙참랑",
+        "en": "Fenrier"
+      },
+      "props": {
+        "aniilog_no": "046",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:glynsera",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "설휘랑",
+        "en": "Glynsera"
+      },
+      "props": {
+        "aniilog_no": "047",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Prismana examples"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:bolty",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "라이트밍",
+        "en": "Bolty"
+      },
+      "props": {
+        "aniilog_no": "048",
+        "element": "Lightning",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Blitzwood lore (Bolties)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:blazen",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "볼트밍",
+        "en": "Blazen"
+      },
+      "props": {
+        "aniilog_no": "049",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Prismana examples"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [
+        "source:0",
+        "source:3",
+        "source:4"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:susuta",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "수줍달",
+        "en": "Susuta"
+      },
+      "props": {
+        "aniilog_no": "050",
+        "element": "Water",
+        "role_ko": "격파",
+        "rarity": "pre_registration_egg_reward",
+        "forms_known": [
+          "기본 형태",
+          "밤 형태"
+        ],
+        "stats": {
+          "total_attr": 411,
+          "hp": 81,
+          "break": 72,
+          "attack": 61,
+          "magic_def": 80,
+          "phys_def": 53,
+          "energy_regen": 64,
+          "confidence": "confirmed",
+          "source": "https://wiki.aniimo.com/ko/item/10003298"
+        },
+        "notes": "Official KO 수줍달 NO.050 물 격파; EN Susuta; pre-reg mysterious egg. User also said 수수타나 — treat as related naming, verify. Line: Susuta→Popota→Piopiota→Panpanta (community)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:popota",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "보글달",
+        "en": "Popota"
+      },
+      "props": {
+        "aniilog_no": "051",
+        "element": "Water",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Susuta line (community)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:piopiota",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "둥실달",
+        "en": "Piopiota"
+      },
+      "props": {
+        "aniilog_no": "052",
+        "element": "Water",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Susuta line (community)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:panpanta",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "둔둔달",
+        "en": "Panpanta"
+      },
+      "props": {
+        "aniilog_no": "053",
+        "element": "Water",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Susuta line (community)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:shelly",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "클램스타",
+        "en": "Shelly"
+      },
+      "props": {
+        "aniilog_no": "054",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Crescent Bay / Echoback (community)"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:sheldon",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "위즈스타",
+        "en": "Sheldon"
+      },
+      "props": {
+        "aniilog_no": "055",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:sherro",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "나이트스타",
+        "en": "Sherro"
+      },
+      "props": {
+        "aniilog_no": "056",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:baleetle",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "데굴굴",
+        "en": "Baleetle"
+      },
+      "props": {
+        "aniilog_no": "057",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:waleetle",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "모터터",
+        "en": "Waleetle"
+      },
+      "props": {
+        "aniilog_no": "058",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:bouldus",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "록볼볼",
+        "en": "Bouldus"
+      },
+      "props": {
+        "aniilog_no": "059",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fentuft",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "엔젤멍",
+        "en": "Fentuft"
+      },
+      "props": {
+        "aniilog_no": "060",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fenmane",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "우스멍",
+        "en": "Fenmane"
+      },
+      "props": {
+        "aniilog_no": "061",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:helmut",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "투구누니",
+        "en": "Helmut"
+      },
+      "props": {
+        "aniilog_no": "062",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:pawney",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "누니용사",
+        "en": "Pawney"
+      },
+      "props": {
+        "aniilog_no": "063",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Prismana examples"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:roockey",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "아머누니",
+        "en": "Rookey"
+      },
+      "props": {
+        "aniilog_no": "064",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:jawling",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "바이티",
+        "en": "Jawling"
+      },
+      "props": {
+        "aniilog_no": "065",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:helmwhelp",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "갸면뇽",
+        "en": "Helmwhelp"
+      },
+      "props": {
+        "aniilog_no": "066",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:helgon",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "갸고일",
+        "en": "Helgon"
+      },
+      "props": {
+        "aniilog_no": "067",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:infergon",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "갸갑파이어",
+        "en": "Infergon"
+      },
+      "props": {
+        "aniilog_no": "068",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:cubbo",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "드리미",
+        "en": "Cubbo"
+      },
+      "props": {
+        "aniilog_no": "069",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:grizbo",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "푹자곰",
+        "en": "Grizbo"
+      },
+      "props": {
+        "aniilog_no": "070",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:pebbling",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "록키",
+        "en": "Pebbling"
+      },
+      "props": {
+        "aniilog_no": "071",
+        "element": "Earth",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Branching evo to Geodeback (Earth) or Lavazar (Fire) — community"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:lavazar",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "라바크",
+        "en": "Lavazar"
+      },
+      "props": {
+        "aniilog_no": "072",
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Pebbling branch"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:magmarex",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "마그라곤",
+        "en": "Magmarex"
+      },
+      "props": {
+        "aniilog_no": "073",
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:geodeback",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "크리스톤",
+        "en": "Geodeback"
+      },
+      "props": {
+        "aniilog_no": "074",
+        "element": "Earth",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Pebbling branch"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:minespine",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "크리스바인",
+        "en": "Minespine"
+      },
+      "props": {
+        "aniilog_no": "075",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:cozite",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "침니앤트",
+        "en": "Cozite"
+      },
+      "props": {
+        "aniilog_no": "076",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:bailite",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "캐슬앤트",
+        "en": "Bailite"
+      },
+      "props": {
+        "aniilog_no": "077",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:bulbly",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "램프젤리",
+        "en": "Bulbly"
+      },
+      "props": {
+        "aniilog_no": "078",
+        "element": "Lightning",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:veilfloat",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "루미젤리",
+        "en": "Veilfloat"
+      },
+      "props": {
+        "aniilog_no": "079",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:luminelle",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "샹들라젤리",
+        "en": "Luminelle"
+      },
+      "props": {
+        "aniilog_no": "080",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fahloo",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "버블버드",
+        "en": "Fahloo"
+      },
+      "props": {
+        "aniilog_no": "081",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:erlath",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "폼폼버드",
+        "en": "Erlath"
+      },
+      "props": {
+        "aniilog_no": "082",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:besauce",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "베서스",
+        "en": "Besauce"
+      },
+      "props": {
+        "aniilog_no": "083",
+        "element": "Lightning",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:reefish",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Reefish"
+      },
+      "props": {
+        "aniilog_no": "084",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:coraliz",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Coraliz"
+      },
+      "props": {
+        "aniilog_no": "085",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:cheekie",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Cheekie"
+      },
+      "props": {
+        "aniilog_no": "086",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:wavwal",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Wavwal"
+      },
+      "props": {
+        "aniilog_no": "087",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Highest total base stats 575 on Aniidex (community from official wiki)"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:bubbeep",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Bubbeep"
+      },
+      "props": {
+        "aniilog_no": "088",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Official habitat Crescent Bay"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:glameep",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Glameep"
+      },
+      "props": {
+        "aniilog_no": "089",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:popapus",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Popapus"
+      },
+      "props": {
+        "aniilog_no": "090",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:gachapus",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Gachapus"
+      },
+      "props": {
+        "aniilog_no": "091",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:malangel",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Malangel"
+      },
+      "props": {
+        "aniilog_no": "092",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:malevsera",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Malevsera"
+      },
+      "props": {
+        "aniilog_no": "093",
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:lunara",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "루나센",
+        "en": "Lunara"
+      },
+      "props": {
+        "aniilog_no": "9997",
+        "element": "Light",
+        "role_ko": null,
+        "rarity": "special_light_roster",
+        "forms_known": null,
+        "stats": null,
+        "notes": "Outside numbered sequence; Light roster floor"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:fennelun",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Fennelun"
+      },
+      "props": {
+        "aniilog_no": "9997",
+        "element": "Light",
+        "role_ko": null,
+        "rarity": "special_light_roster",
+        "forms_known": null,
+        "stats": null,
+        "notes": "Shares catalog number display 9997 on Aniidex — verify"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:helion",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "헬리온",
+        "en": "Helion"
+      },
+      "props": {
+        "aniilog_no": "9998",
+        "element": "Light",
+        "role_ko": null,
+        "rarity": "special_light_roster",
+        "forms_known": null,
+        "stats": null,
+        "notes": "Inven story mention 헬리온"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [
+        "source:32"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:soleon",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": null,
+        "en": "Soleon"
+      },
+      "props": {
+        "aniilog_no": "9998",
+        "element": "Light",
+        "role_ko": null,
+        "rarity": "special_light_roster",
+        "forms_known": null,
+        "stats": null,
+        "notes": null
+      }
+    },
+    {
+      "confidence": "unknown",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "creature:susutana",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "수수타나",
+        "en": null
+      },
+      "props": {
+        "aniilog_no": null,
+        "element": null,
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "User/marketing-adjacent Korean name; may be Susuta line or localization variant of 수수타/수줍달 — NOT confirmed equal. Prefer 수줍달=Susuta from official index."
+      }
+    },
+    {
+      "confidence": "marketing",
+      "sources": [
+        "source:16"
+      ],
+      "lastVerified": "2026-09-16",
+      "id": "creature:flameruff-or-scorchhowl-ko",
+      "type": "Creature",
+      "category": "creature.species",
+      "name": {
+        "ko": "화염랑",
+        "en": null
+      },
+      "props": {
+        "aniilog_no": null,
+        "element": "Fire",
+        "role_ko": null,
+        "rarity": null,
+        "forms_known": null,
+        "stats": null,
+        "notes": "Xbox KO store copy mentions 화염랑 resting by fire — likely Fire wolf line EN name TBD."
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:astranite_basic",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "Basic Astranite",
+        "en": "Basic Astranite"
+      },
+      "props": {
+        "effect": "resonance_fuel"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:astranite_standard",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "Standard Astranite",
+        "en": "Standard Astranite"
+      },
+      "props": {
+        "effect": "resonance_fuel"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:astranite_advanced",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "Advanced Astranite",
+        "en": "Advanced Astranite"
+      },
+      "props": {
+        "effect": "resonance_fuel"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:champion_aniipod",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "챔피언 애니팟",
+        "en": "Champion Aniipod"
+      },
+      "props": {
+        "effect": "guaranteed_catch_plus_innate_bias"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:sparkling_aniipod",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "스파클 애니팟",
+        "en": "Sparkling Aniipod"
+      },
+      "props": {
+        "effect": "guaranteed_catch_apply_sparkling_style_table"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:sparkling_sigil",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "스파클 인장",
+        "en": "Sparkling Sigil / Mark"
+      },
+      "props": {
+        "effect": "grant_sparkling_to_owned"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:sparkling_radiance",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "스파클 광채",
+        "en": "Sparkling Radiance"
+      },
+      "props": {
+        "effect": "reroll_sparkling_style"
+      }
+    },
+    {
+      "confidence": "community",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:lumin_amber",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "Lumin Amber",
+        "en": "Lumin Amber"
+      },
+      "props": {
+        "effect": "branch_infusion_catch_nurture_weather_sparkling"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:leyline_essence",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "지맥 정수",
+        "en": "Leyline essence"
+      },
+      "props": {
+        "effect": "nurture_prismana_energy"
+      }
+    },
+    {
+      "confidence": "marketing",
+      "sources": [],
+      "lastVerified": "2026-09-16",
+      "id": "item:evolution_material_generic",
+      "type": "Item",
+      "category": "item.material",
+      "name": {
+        "ko": "진화 재료",
+        "en": "Evolution material (branching)"
+      },
+      "props": {
+        "effect": "unlock_evolution_edge"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "region:argent-strait",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:beast-fang-ridge",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:berylline-causeway",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:blitzwood",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:brightbough-plateau",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:driftwise-meadow",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:echoback-landing",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:forest-of-falling-stars",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:mistwoods",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:nimbus-fields",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:rosetower-wood",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:russet-highlands",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:sea-of-flowers",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:tideblossom-coast",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:zephyrus-landbridge",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:breezy-plains",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:crescent-bay",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:island-of-peace",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:whale-splash-coast",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:seagull-bay",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:berylline-vale",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "region:astra",
+      "type": "PART_OF",
+      "to": "continent:idyll"
+    },
+    {
+      "from": "creature:emberpup",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:flameruff",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:scorchhowl",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:inferlupa",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:irisalis",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:nimbi",
+      "type": "FOUND_IN",
+      "to": "region:nimbus-fields"
+    },
+    {
+      "from": "creature:hexxin",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:budclaw",
+      "type": "HAS_ELEMENT",
+      "to": "element:Earth"
+    },
+    {
+      "from": "creature:budclaw",
+      "type": "CITES",
+      "to": "source:6"
+    },
+    {
+      "from": "creature:budclaw",
+      "type": "FOUND_IN",
+      "to": "region:whale-splash-coast"
+    },
+    {
+      "from": "creature:budclaw",
+      "type": "FOUND_IN",
+      "to": "region:seagull-bay"
+    },
+    {
+      "from": "creature:shrubclaw",
+      "type": "HAS_ELEMENT",
+      "to": "element:Earth"
+    },
+    {
+      "from": "creature:geoclaw",
+      "type": "HAS_ELEMENT",
+      "to": "element:Earth"
+    },
+    {
+      "from": "creature:somniwing",
+      "type": "HAS_ELEMENT",
+      "to": "element:Wind"
+    },
+    {
+      "from": "creature:somniwing",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:thornblade",
+      "type": "HAS_ELEMENT",
+      "to": "element:Grass"
+    },
+    {
+      "from": "creature:fulmintis",
+      "type": "HAS_ELEMENT",
+      "to": "element:Lightning"
+    },
+    {
+      "from": "creature:bolty",
+      "type": "HAS_ELEMENT",
+      "to": "element:Lightning"
+    },
+    {
+      "from": "creature:bolty",
+      "type": "FOUND_IN",
+      "to": "region:blitzwood"
+    },
+    {
+      "from": "creature:susuta",
+      "type": "HAS_ELEMENT",
+      "to": "element:Water"
+    },
+    {
+      "from": "creature:susuta",
+      "type": "CITES",
+      "to": "source:0"
+    },
+    {
+      "from": "creature:susuta",
+      "type": "CITES",
+      "to": "source:3"
+    },
+    {
+      "from": "creature:susuta",
+      "type": "CITES",
+      "to": "source:4"
+    },
+    {
+      "from": "creature:susuta",
+      "type": "FOUND_IN",
+      "to": "region:whale-splash-coast"
+    },
+    {
+      "from": "creature:popota",
+      "type": "HAS_ELEMENT",
+      "to": "element:Water"
+    },
+    {
+      "from": "creature:piopiota",
+      "type": "HAS_ELEMENT",
+      "to": "element:Water"
+    },
+    {
+      "from": "creature:panpanta",
+      "type": "HAS_ELEMENT",
+      "to": "element:Water"
+    },
+    {
+      "from": "creature:shelly",
+      "type": "FOUND_IN",
+      "to": "region:crescent-bay"
+    },
+    {
+      "from": "creature:pebbling",
+      "type": "HAS_ELEMENT",
+      "to": "element:Earth"
+    },
+    {
+      "from": "creature:lavazar",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:magmarex",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:geodeback",
+      "type": "HAS_ELEMENT",
+      "to": "element:Earth"
+    },
+    {
+      "from": "creature:bulbly",
+      "type": "HAS_ELEMENT",
+      "to": "element:Lightning"
+    },
+    {
+      "from": "creature:besauce",
+      "type": "HAS_ELEMENT",
+      "to": "element:Lightning"
+    },
+    {
+      "from": "creature:reefish",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:coraliz",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:cheekie",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:wavwal",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:bubbeep",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:bubbeep",
+      "type": "FOUND_IN",
+      "to": "region:crescent-bay"
+    },
+    {
+      "from": "creature:glameep",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:popapus",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:gachapus",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:malangel",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:malevsera",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:lunara",
+      "type": "HAS_ELEMENT",
+      "to": "element:Light"
+    },
+    {
+      "from": "creature:fennelun",
+      "type": "HAS_ELEMENT",
+      "to": "element:Light"
+    },
+    {
+      "from": "creature:fennelun",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:helion",
+      "type": "HAS_ELEMENT",
+      "to": "element:Light"
+    },
+    {
+      "from": "creature:soleon",
+      "type": "HAS_ELEMENT",
+      "to": "element:Light"
+    },
+    {
+      "from": "creature:soleon",
+      "type": "CITES",
+      "to": "source:32"
+    },
+    {
+      "from": "creature:flameruff-or-scorchhowl-ko",
+      "type": "HAS_ELEMENT",
+      "to": "element:Fire"
+    },
+    {
+      "from": "creature:flameruff-or-scorchhowl-ko",
+      "type": "CITES",
+      "to": "source:16"
+    }
+  ]
+}
