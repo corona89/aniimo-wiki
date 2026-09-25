@@ -59,6 +59,42 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
         description={creature.notes ?? creature.form_notes ?? undefined}
       />
 
+      <section className="mb-6 wiki-card p-5">
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="font-display text-lg">{t.detail.atGlance}</h2>
+          <ConfidenceChip value={creature.confidence} />
+        </div>
+        <dl className="mt-4 grid gap-4 text-sm sm:grid-cols-3">
+          <div>
+            <dt className="text-[var(--muted)]">{t.detail.no}</dt>
+            <dd className="mt-1 font-mono">{creature.aniilog_no ? `NO.${creature.aniilog_no}` : creature.id}</dd>
+          </div>
+          <div>
+            <dt className="text-[var(--muted)]">{locale === "en" ? "Element" : "속성"}</dt>
+            <dd className="mt-1">
+              {creature.element ? <ElementBadge element={creature.element} compact /> : t.detail.unknownField}
+            </dd>
+          </div>
+          <div>
+            <dt className="text-[var(--muted)]">{t.detail.role}</dt>
+            <dd className="mt-1">{creature.role_ko ?? t.detail.unknownField}</dd>
+          </div>
+          <div>
+            <dt className="text-[var(--muted)]">{t.detail.stage}</dt>
+            <dd className="mt-1">{t.detail.unknownField}</dd>
+          </div>
+          <div>
+            <dt className="text-[var(--muted)]">{t.detail.rarity}</dt>
+            <dd className="mt-1">{creature.rarity ?? t.detail.unknownField}</dd>
+          </div>
+          <div>
+            <dt className="text-[var(--muted)]">{t.detail.formsCount}</dt>
+            <dd className="mt-1">{creature.forms_known?.length ?? t.detail.unknownField}</dd>
+          </div>
+        </dl>
+        <p className="mt-3 text-xs text-[var(--muted)]">{t.detail.fieldNote}</p>
+      </section>
+
       <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
         <section className="wiki-card overflow-hidden">
           {img ? (
