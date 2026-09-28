@@ -20,8 +20,13 @@ export type SystemOneResponse = {
 
 const ENDPOINT = "https://api.typesafe.ai/v1/systemone";
 
+function apiKey(): string | undefined {
+  // Secret is stored as JEV_KEY; keep TYPESAFE_API_KEY as a fallback name.
+  return process.env.JEV_KEY ?? process.env.TYPESAFE_API_KEY;
+}
+
 export function isTypeSafeConfigured(): boolean {
-  return Boolean(process.env.TYPESAFE_API_KEY);
+  return Boolean(apiKey());
 }
 
 /** Evaluate typed questions against a state. All questions run in parallel server-side. */
@@ -30,8 +35,8 @@ export async function systemOne(
   questions: Record<string, Question>,
   model = process.env.TYPESAFE_MODEL ?? "jev-latest",
 ): Promise<SystemOneResponse> {
-  const key = process.env.TYPESAFE_API_KEY;
-  if (!key) throw new Error("TYPESAFE_API_KEY is not set");
+  const key = apiKey();
+  if (!key) throw new Error("JEV_KEY (or TYPESAFE_API_KEY) is not set");
   const res = await fetch(ENDPOINT, {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },

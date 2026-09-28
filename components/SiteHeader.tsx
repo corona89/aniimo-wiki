@@ -13,6 +13,7 @@ export async function SiteHeader() {
     { href: "/systems", label: t.nav.systems },
     { href: "/training", label: t.nav.training },
     { href: "/maps", label: t.nav.maps },
+    { href: "/qna", label: t.nav.qna },
     { href: "/search", label: t.nav.search },
   ];
 
