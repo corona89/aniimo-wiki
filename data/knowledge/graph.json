@@ -730,6 +730,24 @@
       "confidence": "confirmed",
       "sources": [],
       "lastVerified": "2026-09-16",
+      "id": "source:40",
+      "type": "Source",
+      "category": "meta.source",
+      "name": {
+        "ko": "모아니모 아이리스테일 획득 공략 (aniimo.kr) — 한국어 명칭 보조 출처",
+        "en": "모아니모 아이리스테일 획득 공략 (aniimo.kr) — 한국어 명칭 보조 출처"
+      },
+      "props": {
+        "url": "https://aniimo.kr/systems/irisalis-acquisition-guide",
+        "type": "community",
+        "accessed": "2026-10-02",
+        "notes": "irisalis 아이리스테일 명칭 보조 확인"
+      }
+    },
+    {
+      "confidence": "confirmed",
+      "sources": [],
+      "lastVerified": "2026-09-16",
       "id": "game:aniimo",
       "type": "Game",
       "category": "game",
@@ -2236,11 +2254,12 @@
         "source:38"
       ],
       "lastVerified": "2026-09-16",
-      "id": "creature:official-021",
+      "id": "creature:hexxin",
       "type": "Creature",
       "category": "game.creature.dark",
       "name": {
-        "ko": "위치햇그라스"
+        "ko": "위치햇그라스",
+        "en": "Hexxin"
       },
       "props": {
         "aniilog_no": "021",
@@ -2271,31 +2290,7 @@
           "공격",
           "소멸의 폭탄"
         ],
-        "notes": null
-      }
-    },
-    {
-      "confidence": "community",
-      "sources": [
-        "source:32"
-      ],
-      "lastVerified": "2026-09-16",
-      "id": "creature:hexxin",
-      "type": "Creature",
-      "category": "game.creature",
-      "name": {
-        "ko": null,
-        "en": "Hexxin"
-      },
-      "props": {
-        "aniilog_no": null,
-        "element": null,
-        "role_ko": null,
-        "rarity": null,
-        "forms_known": null,
-        "stats": null,
-        "skills": [],
-        "notes": "커뮤니티 부여 번호 022는 공식 번호(굴파미 라인)와 충돌 — 2026-10-02 제거"
+        "notes": "커뮤니티 중복 행(hexxin, 잘못된 번호 022) 병합 — 에셋ID 10203 일치로 동일 종 확인(모아니모: 위치햇풀=Hexxin), 2026-10-02 소유자 결정"
       }
     },
     {
@@ -5280,54 +5275,6 @@
         "stats": null,
         "skills": [],
         "notes": "Xbox KO store copy mentions 화염랑 resting by fire — likely Fire wolf line EN name TBD."
-      }
-    },
-    {
-      "confidence": "community",
-      "sources": [
-        "source:32"
-      ],
-      "lastVerified": "2026-09-16",
-      "id": "creature:fennelun",
-      "type": "Creature",
-      "category": "game.creature.light",
-      "name": {
-        "ko": null,
-        "en": "Fennelun"
-      },
-      "props": {
-        "aniilog_no": "9997",
-        "element": "Light",
-        "role_ko": null,
-        "rarity": "special_light_roster",
-        "forms_known": null,
-        "stats": null,
-        "skills": [],
-        "notes": "Shares catalog number display 9997 on Aniidex — verify"
-      }
-    },
-    {
-      "confidence": "community",
-      "sources": [
-        "source:32"
-      ],
-      "lastVerified": "2026-09-16",
-      "id": "creature:soleon",
-      "type": "Creature",
-      "category": "game.creature.light",
-      "name": {
-        "ko": null,
-        "en": "Soleon"
-      },
-      "props": {
-        "aniilog_no": "9998",
-        "element": "Light",
-        "role_ko": null,
-        "rarity": "special_light_roster",
-        "forms_known": null,
-        "stats": null,
-        "skills": [],
-        "notes": null
       }
     },
     {
@@ -16096,19 +16043,14 @@
       "to": "source:38"
     },
     {
-      "from": "creature:official-021",
+      "from": "creature:hexxin",
       "type": "HAS_ELEMENT",
       "to": "element:Dark"
     },
     {
-      "from": "creature:official-021",
-      "type": "CITES",
-      "to": "source:38"
-    },
-    {
       "from": "creature:hexxin",
       "type": "CITES",
-      "to": "source:32"
+      "to": "source:38"
     },
     {
       "from": "creature:tuckin",
@@ -16859,26 +16801,6 @@
       "from": "creature:flameruff-or-scorchhowl-ko",
       "type": "CITES",
       "to": "source:16"
-    },
-    {
-      "from": "creature:fennelun",
-      "type": "HAS_ELEMENT",
-      "to": "element:Light"
-    },
-    {
-      "from": "creature:fennelun",
-      "type": "CITES",
-      "to": "source:32"
-    },
-    {
-      "from": "creature:soleon",
-      "type": "HAS_ELEMENT",
-      "to": "element:Light"
-    },
-    {
-      "from": "creature:soleon",
-      "type": "CITES",
-      "to": "source:32"
     },
     {
       "from": "creature:lunara",
