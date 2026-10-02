@@ -1,4 +1,6 @@
+import { CommunityIngestPanel } from "@/components/CommunityIngestPanel";
 import { EditLink } from "@/components/EditLink";
+import { IngestHistoryPanel } from "@/components/IngestHistoryPanel";
 import { PageHeader } from "@/components/PageHeader";
 import { LinkButton } from "@/components/ui";
 import { adminUsername, getAdmin, isAuthConfigured, isPasswordConfigured } from "@/lib/auth";
@@ -55,6 +57,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
       ) : null}
 
       {isAdmin ? (
+        <>
         <section className="wiki-card p-6">
           <div className="mb-4 flex items-center justify-between gap-3">
             <p className="text-sm text-[var(--muted)]">
@@ -74,6 +77,17 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
             ))}
           </ul>
         </section>
+        <section className="wiki-card mt-6 p-6">
+          <h2 className="font-display text-xl">{t.ingest.title}</h2>
+          <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{t.ingest.desc}</p>
+          <CommunityIngestPanel />
+        </section>
+        <section className="wiki-card mt-6 p-6">
+          <h2 className="font-display text-xl">{t.ingest.historyTitle}</h2>
+          <p className="mt-1 text-sm leading-6 text-[var(--muted)]">{t.ingest.historyDesc}</p>
+          <IngestHistoryPanel />
+        </section>
+        </>
       ) : (
         <section className="wiki-card p-8 text-center">
           <p className="font-display text-2xl">{t.auth.adminOnly}</p>
