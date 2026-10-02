@@ -10,6 +10,17 @@ export type OfficialStats = {
   energy_regen: number | null;
   confidence: Confidence;
   source?: string;
+  accessed?: string;
+};
+
+/** Skill scraped from the official Aniilog (wiki.aniimo.com). */
+export type OfficialSkill = {
+  name: string;
+  desc?: string;
+  kind?: string;
+  cost?: number | null;
+  power?: number | null;
+  icon?: string | null;
 };
 
 export type Creature = {
@@ -25,11 +36,16 @@ export type Creature = {
   form_notes?: string | null;
   confidence: Confidence;
   source?: string;
+  source_accessed?: string;
   stats?: OfficialStats | null;
   notes?: string | null;
   role_ko?: string | null;
   forms_known?: string[];
   official_stats_species?: OfficialStats | null;
+  /** Official full art (hotlinked from the official CDN, © Pawprint Studio). */
+  official_image?: string | null;
+  official_desc_ko?: string | null;
+  skills?: OfficialSkill[];
 };
 
 export type Region = {
