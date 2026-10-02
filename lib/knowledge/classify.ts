@@ -10,16 +10,19 @@ const CATEGORY_CRITERIA: Record<string, string> = Object.fromEntries(
   CATEGORY_TAXONOMY.map((c) => [c.id, c.description.en]),
 );
 
-// Fallback keyword hints per top-level category (KO + EN).
+// Fallback keyword hints per category (KO + EN). Keys follow the owner's
+// taxonomy (2026-09-30): game.<x> + meta.
 const KEYWORDS: Record<string, string[]> = {
-  game: ["release", "platform", "publisher", "developer", "출시", "플랫폼", "퍼블리셔", "등급"],
-  world: ["region", "idyll", "biome", "continent", "지역", "에이델", "대륙", "바이오메"],
-  creature: ["aniimo", "element", "evolution", "stats", "종족치", "속성", "진화", "도감", "형태"],
-  system: ["twine", "capture", "combat", "aniipod", "트와인", "포획", "전투", "애니팟", "홈랜드"],
-  training: ["potential", "sparkling", "resonance", "breeding", "잠재력", "스파클", "공명", "교배", "부화"],
-  item: ["astranite", "material", "pod", "재료", "아스트라나이트", "정수"],
-  quest: ["quest", "event", "reward", "퀘스트", "이벤트", "보상"],
-  map: ["map", "marker", "spawn", "지도", "마커", "스폰", "좌표"],
+  "game.region": ["region", "idyll", "biome", "map", "지역", "에이델", "대륙", "바이오메", "지도"],
+  "game.creature": ["aniimo", "creature", "evolution", "stats", "dex", "종족치", "도감", "진화", "형태"],
+  "game.quest": ["quest", "mission", "퀘스트", "미션"],
+  "game.event": ["event", "season", "collab", "이벤트", "시즌", "콜라보", "사전예약"],
+  "game.story": ["story", "lore", "boss", "스토리", "설정", "보스", "플롯"],
+  "game.party": ["party", "team", "comp", "build", "lineup", "squad", "파티", "조합", "덱", "팀"],
+  "game.element": ["element", "fire", "water", "lightning", "속성", "상성", "번개", "바람"],
+  "game.item": ["item", "material", "pod", "astranite", "credit", "아이템", "재료", "아스트라나이트", "크레딧", "애니팟"],
+  "game.weapon": ["weapon", "무기"],
+  "game.egg": ["egg", "hatch", "breed", "알", "부화", "교배"],
   meta: ["source", "naming", "version", "출처", "표기", "버전"],
 };
 
