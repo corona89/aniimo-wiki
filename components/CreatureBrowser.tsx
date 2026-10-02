@@ -71,7 +71,9 @@ export function CreatureBrowser({ creatures }: { creatures: Creature[] }) {
 
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((creature) => {
-          const img = elementImage(creature.element);
+          // Official Aniilog art first (hotlinked, © Pawprint Studio);
+          // element fan art is the fallback for community-only rows.
+          const img = creature.official_image ?? elementImage(creature.element);
           return (
             <li key={creature.id}>
               <Link
