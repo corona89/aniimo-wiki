@@ -10,7 +10,8 @@
   "naming_flags": {
     "수줍달_vs_Susuta": "Official KO index NO.050 수줍달 matches Susuta stats/number — treat as same species.",
     "수수타나": "Ambiguous; do not merge into Susuta without official string.",
-    "싹크랩_vs_Budclaw": "Official KO 싹크랩 NO.024 matches Budclaw community number/stats 454."
+    "싹크랩_vs_Budclaw": "Official KO 싹크랩 NO.024 matches Budclaw community number/stats 454.",
+    "Fennelun_Soleon_제거": "커뮤니티 가번호 9997/9998 — 공식 위키에 해당 번호 없음(9997 404 확인; 실재는 99996 루나센/99998 헬리온), 모아니모·aniimotools 도감 미수록. 2026-10-02 소유자 결정으로 행 삭제."
   },
   "creatures": [
     {
@@ -1777,8 +1778,9 @@
     },
     {
       "id": "aniimo-021",
-      "slug": "official-021",
+      "slug": "hexxin",
       "aniilog_no": "021",
+      "name_en": "Hexxin",
       "name_ko": "위치햇그라스",
       "element": "Dark",
       "official_image": "https://worldx-website-cdn.aniimo.com/official-website/worldx/wiki_stage/init/Wiki_Aniimo_10203.png",
@@ -1871,23 +1873,8 @@
       ],
       "confidence": "confirmed",
       "source": "https://wiki.aniimo.com/ko/item/021",
-      "source_accessed": "2026-09-29"
-    },
-    {
-      "id": "aniimo-022",
-      "slug": "hexxin",
-      "aniilog_no": null,
-      "name_en": "Hexxin",
-      "name_ko": null,
-      "element": null,
-      "evolution_notes": null,
-      "habitat_region_hints": null,
-      "rarity": null,
-      "form_notes": null,
-      "confidence": "community",
-      "source": "https://aniimoguide.com/aniidex",
-      "stats": null,
-      "notes": "커뮤니티 부여 번호 022는 공식 번호(굴파미 라인)와 충돌 — 2026-10-02 제거"
+      "source_accessed": "2026-09-29",
+      "notes": "커뮤니티 중복 행(hexxin, 잘못된 번호 022) 병합 — 에셋ID 10203 일치로 동일 종 확인(모아니모: 위치햇풀=Hexxin), 2026-10-02 소유자 결정"
     },
     {
       "id": "aniimo-023",
@@ -7346,34 +7333,6 @@
       "notes": "Xbox KO store copy mentions 화염랑 resting by fire — likely Fire wolf line EN name TBD.",
       "confidence": "marketing",
       "source": "https://www.xbox.com/ko-KR/games/store/aniimo/9PK8PHLCQDF6"
-    },
-    {
-      "id": "aniimo-fennelun",
-      "slug": "fennelun",
-      "aniilog_no": "9997",
-      "name_en": "Fennelun",
-      "name_ko": null,
-      "element": "Light",
-      "evolution_notes": null,
-      "habitat_region_hints": null,
-      "rarity": "special_light_roster",
-      "notes": "Shares catalog number display 9997 on Aniidex — verify",
-      "confidence": "community",
-      "source": "https://aniimoguide.com/aniidex ; Inven for Helion KO"
-    },
-    {
-      "id": "aniimo-soleon",
-      "slug": "soleon",
-      "aniilog_no": "9998",
-      "name_en": "Soleon",
-      "name_ko": null,
-      "element": "Light",
-      "evolution_notes": null,
-      "habitat_region_hints": null,
-      "rarity": "special_light_roster",
-      "notes": null,
-      "confidence": "community",
-      "source": "https://aniimoguide.com/aniidex ; Inven for Helion KO"
     },
     {
       "id": "aniimo-lunara",
