@@ -36,15 +36,19 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
 
   const { locale, t } = await getT();
   const stats = creature.official_stats_species ?? creature.stats ?? null;
-  const img = elementImage(creature.element);
+  const officialImg = creature.official_image ?? null;
+  const img = officialImg ?? elementImage(creature.element);
   const relatedRegions = regionsForCreature(creature);
   const kin = relatedCreatures(creature);
   const sourceUrls = (creature.source ?? "")
     .split(";")
     .map((url) => url.trim())
     .filter(Boolean);
-  const primarySource = sourceUrls[0];
-  const primaryIsAniidex = primarySource?.includes("aniimoguide.com") ?? false;
+  // Prefer the official Aniilog/wiki page as the primary link-out target.
+  const officialUrl = sourceUrls.find((url) => url.includes("wiki.aniimo.com")) ?? null;
+  const primarySource = officialUrl ?? sourceUrls[0];
+  const primaryIsOfficial = Boolean(officialUrl);
+  const primaryIsAniidex = !primaryIsOfficial && primarySource?.includes("aniimoguide.com") ? true : false;
 
   return (
     <div>
@@ -107,10 +111,16 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
                 className="object-cover"
                 priority
               />
+              <span className="absolute bottom-2 left-2 rounded-full bg-black/45 px-2.5 py-1 text-[10px] text-white backdrop-blur">
+                {officialImg ? t.detail.officialImageNote : t.detail.bannerNote}
+              </span>
             </div>
           ) : null}
           <div className="p-6">
             <NamePair ko={creature.name_ko} en={creature.name_en} size="lg" />
+            {creature.official_desc_ko ? (
+              <p className="mt-4 text-sm leading-7 text-[var(--ink-soft)]">{creature.official_desc_ko}</p>
+            ) : null}
             <div className="mt-4 flex flex-wrap items-center gap-2">
               <ConfidenceChip value={creature.confidence} />
               <ElementBadge element={creature.element} />
@@ -120,7 +130,12 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
               <div className="mt-5 rounded-2xl border border-[var(--line)] bg-[var(--paper-2)] p-4">
                 <div className="flex flex-wrap items-center gap-3">
                   <LinkButton href={primarySource} variant="primary" external>
-                    {primaryIsAniidex ? t.detail.viewOnAniidex : t.detail.viewOriginal} ↗
+                    {primaryIsOfficial
+                      ? t.detail.viewOfficial
+                      : primaryIsAniidex
+                        ? t.detail.viewOnAniidex
+                        : t.detail.viewOriginal}{" "}
+                    ↗
                   </LinkButton>
                   {sourceUrls.slice(1).map((url) => (
                     <a key={url} href={url} className="link-moss text-xs" target="_blank" rel="noopener noreferrer">
@@ -149,12 +164,21 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
                 <dd>{creature.forms_known?.join(" · ") || t.common.notRecorded}</dd>
               </div>
             </dl>
-            {creature.source ? (
-              <p className="mt-6 text-xs">
-                {t.common.source}:{" "}
-                <a className="break-all link-moss" href={creature.source}>
-                  {creature.source}
-                </a>
+            {sourceUrls.length > 0 ? (
+              <p className="mt-6 text-xs text-[var(--muted)]">
+                {t.common.source}:
+                {sourceUrls.map((url, index) => (
+                  <a
+                    key={url}
+                    className="break-all link-moss"
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {index > 0 ? " · " : " "}
+                    {url}
+                  </a>
+                ))}
               </p>
             ) : null}
           </div>
@@ -181,6 +205,38 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
         </section>
       </div>
 
+      {creature.skills && creature.skills.length > 0 ? (
+        <section className="mt-10">
+          <SectionHeading title={t.detail.skillsTitle} />
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+            {creature.skills.map((skill, index) => (
+              <li key={`${skill.name}-${index}`} className="wiki-card flex gap-3 p-4">
+                {skill.icon ? (
+                  <Image
+                    src={skill.icon}
+                    alt=""
+                    width={40}
+                    height={40}
+                    className="h-10 w-10 shrink-0 rounded-lg object-cover"
+                  />
+                ) : null}
+                <div className="min-w-0">
+                  <p className="font-medium text-[var(--ink)]">{skill.name}</p>
+                  {skill.desc ? (
+                    <p className="mt-1 text-xs leading-5 text-[var(--ink-soft)]">{skill.desc}</p>
+                  ) : null}
+                  <p className="mt-1 text-[11px] text-[var(--muted)]">
+                    {[skill.kind, skill.cost != null ? `${t.detail.skillCost} ${skill.cost}` : null, skill.power != null ? `${t.detail.skillPower} ${skill.power}` : null]
+                      .filter(Boolean)
+                      .join(" · ")}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       {relatedRegions.length > 0 ? (
         <section className="mt-10">
           <SectionHeading title={t.detail.relatedHabitats} />
@@ -198,22 +254,25 @@ export default async function CreatureDetailPage({ params }: { params: Promise<{
         <section className="mt-10">
           <SectionHeading title={t.detail.relatedForms} />
           <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {kin.map((other) => (
-              <li key={other.id}>
-                <Link href={`/creatures/${other.slug}`} className="wiki-card card-hover flex items-center gap-3 p-3">
-                  {elementImage(other.element) ? (
-                    <Image
-                      src={elementImage(other.element)!}
-                      alt=""
-                      width={44}
-                      height={44}
-                      className="h-11 w-11 rounded-lg object-cover"
-                    />
-                  ) : null}
-                  <NamePair ko={other.name_ko} en={other.name_en} size="sm" />
-                </Link>
-              </li>
-            ))}
+            {kin.map((other) => {
+              const kinImg = other.official_image ?? elementImage(other.element);
+              return (
+                <li key={other.id}>
+                  <Link href={`/creatures/${other.slug}`} className="wiki-card card-hover flex items-center gap-3 p-3">
+                    {kinImg ? (
+                      <Image
+                        src={kinImg!}
+                        alt=""
+                        width={44}
+                        height={44}
+                        className="h-11 w-11 rounded-lg object-cover"
+                      />
+                    ) : null}
+                    <NamePair ko={other.name_ko} en={other.name_en} size="sm" />
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </section>
       ) : null}
