@@ -1097,7 +1097,7 @@
     {
       "id": "aniimo-013",
       "slug": "irisalis",
-      "aniilog_no": "013",
+      "aniilog_no": null,
       "name_en": "Irisalis",
       "name_ko": "아이리스테일",
       "element": null,
@@ -1108,7 +1108,7 @@
       "confidence": "community",
       "source": "https://aniimoguide.com/aniidex",
       "stats": null,
-      "notes": "Community: Sparkling rate 0 in beta client data · 한국어 명칭 출처: https://aniimo.kr/dex · https://aniimo.kr/systems/irisalis-acquisition-guide (2026-10-02)"
+      "notes": "Community: Sparkling rate 0 in beta client data · 한국어 명칭 출처: https://aniimo.kr/dex · https://aniimo.kr/systems/irisalis-acquisition-guide (2026-10-02) · 커뮤니티 부여 번호 013은 공식 번호(연댕모리 라인)와 충돌 — 2026-10-02 제거"
     },
     {
       "id": "aniimo-014",
@@ -1876,7 +1876,7 @@
     {
       "id": "aniimo-022",
       "slug": "hexxin",
-      "aniilog_no": "022",
+      "aniilog_no": null,
       "name_en": "Hexxin",
       "name_ko": null,
       "element": null,
@@ -1886,7 +1886,8 @@
       "form_notes": null,
       "confidence": "community",
       "source": "https://aniimoguide.com/aniidex",
-      "stats": null
+      "stats": null,
+      "notes": "커뮤니티 부여 번호 022는 공식 번호(굴파미 라인)와 충돌 — 2026-10-02 제거"
     },
     {
       "id": "aniimo-023",
@@ -2602,7 +2603,7 @@
     {
       "id": "aniimo-031",
       "slug": "somniwing",
-      "aniilog_no": "031",
+      "aniilog_no": null,
       "name_en": "Somniwing",
       "name_ko": "드림쵸",
       "element": "Wind",
@@ -2613,7 +2614,7 @@
       "confidence": "community",
       "source": "https://aniimoguide.com/aniidex",
       "stats": null,
-      "notes": "한국어 명칭 출처: https://aniimo.kr/dex (2026-10-02)"
+      "notes": "한국어 명칭 출처: https://aniimo.kr/dex (2026-10-02) · 커뮤니티 부여 번호 031은 공식 번호(래빗배트 라인)와 충돌 — 2026-10-02 제거"
     },
     {
       "id": "aniimo-032",
