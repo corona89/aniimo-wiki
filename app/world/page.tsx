@@ -82,19 +82,19 @@ export default async function WorldPage() {
                 <tr key={region.id} id={region.id} className="scroll-mt-24 align-top">
                   <td className="border-b border-[var(--line)] px-3 py-3">
                     <NamePair ko={region.name_ko} en={region.name_en} size="sm" />
-                    <p className="mt-1 font-mono text-[11px] text-[var(--muted)]">{region.id}</p>
+                    <p className="mt-1 font-mono text-[11px] text-[var(--muted)]">
+                      {region.id}
+                      {region.status ? ` · ${region.status}` : ""}
+                    </p>
                   </td>
                   <td className="border-b border-[var(--line)] px-3 py-3 text-[var(--ink-soft)]">
                     {region.biome_notes ?? t.common.none}
                     {region.weather_notes ? (
                       <p className="mt-1 text-xs text-[var(--muted)]">{region.weather_notes}</p>
                     ) : null}
-                    {region.level_band ? (
-                      <p className="mt-1 font-mono text-xs text-[var(--muted)]">Lv {region.level_band}</p>
-                    ) : null}
                   </td>
                   <td className="border-b border-[var(--line)] px-3 py-3 font-mono text-xs">
-                    {region.status ?? t.common.none}
+                    {region.level_band ? `Lv ${region.level_band}` : t.common.none}
                   </td>
                   <td className="border-b border-[var(--line)] px-3 py-3">
                     {inhabitants.length > 0 ? (
