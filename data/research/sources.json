@@ -264,5 +264,19 @@
     "type": "store",
     "accessed": "2026-09-16",
     "notes": "Confirms Steam appid 4126040"
+  },
+  {
+    "title": "Official Aniilog wiki (KO) — creature index",
+    "url": "https://wiki.aniimo.com/ko",
+    "type": "official",
+    "accessed": "2026-09-29",
+    "notes": "Live official wiki: stats, skills, descriptions, art (hotlinked CDN). Base URL cited by all /ko/item/* creature pages."
+  },
+  {
+    "title": "모아니모 도감 (aniimo.kr) — 한국어 크리처 명칭",
+    "url": "https://aniimo.kr/dex",
+    "type": "community",
+    "accessed": "2026-10-02",
+    "notes": "한국어 크리처 명칭 출처; 모아니모 커뮤니티 도감 (한국어/영어 명칭 병기)"
   }
 ]
