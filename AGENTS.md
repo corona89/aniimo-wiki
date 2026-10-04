@@ -36,8 +36,9 @@ TypeScript + Tailwind v4.
   separate typecheck script)
 - `npm run lint` — eslint
 - `node scripts/build-graph.mjs` — regenerates `data/knowledge/graph.json` from
-  `data/research/*`. **Run it after editing research data**, or `/qna` keeps
-  serving the stale graph.
+  `data/research/*`. graph.json is **gitignored**; `npm run build` regenerates it
+  automatically via `prebuild`. During dev without building, **run it manually
+  after editing research data**, or `/qna` keeps serving the stale graph.
 - `node scripts/scrape-official-wiki.mjs [--dry]` — re-imports live stats/skills/
   art URLs for every creature from the official Aniilog (wiki.aniimo.com/ko)
   into `data/research/creatures.json`; re-run build-graph afterwards.
