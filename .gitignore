@@ -41,3 +41,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .atlas/
+
+# generated data (node scripts/build-graph.mjs)
+data/knowledge/graph.json
